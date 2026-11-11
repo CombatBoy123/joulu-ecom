@@ -6,7 +6,7 @@
 // static export cannot use.
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "jouluecom",
+  "name": "joulu-ecom",
   "compatibility_date": "2026-11-10",
   // The small server side: checkout, order status, Stripe webhook.
   "main": "worker/index.ts",
