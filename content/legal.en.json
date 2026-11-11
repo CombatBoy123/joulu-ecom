@@ -1,0 +1,142 @@
+{
+  "_note": "Placeholders. Final text comes from the owner; legal review recommended. Set a page's \"approved\" to true only once its text is final.",
+  "terms": {
+    "title": "Terms of sale",
+    "approved": false,
+    "sections": [
+      {
+        "heading": "Seller",
+        "body": [
+          "Company name, registry code, address, e-mail, phone: [OWNER TO FILL IN]"
+        ]
+      },
+      {
+        "heading": "Prices and payment",
+        "body": [
+          "All prices are in euros and include applicable taxes. The delivery cost is shown in the cart before payment.",
+          "Payment is made on the secure payment page of the payment provider Stripe.",
+          "[OWNER TO FILL IN]"
+        ]
+      },
+      {
+        "heading": "Delivery",
+        "body": [
+          "[OWNER TO FILL IN]"
+        ]
+      },
+      {
+        "heading": "Right of withdrawal and complaints",
+        "body": [
+          "A consumer has the right to withdraw from an order within 14 days without giving a reason.",
+          "How to make a complaint and how disputes are resolved: [OWNER TO FILL IN]"
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Privacy policy",
+    "approved": false,
+    "sections": [
+      {
+        "heading": "Data controller",
+        "body": [
+          "[OWNER TO FILL IN]"
+        ]
+      },
+      {
+        "heading": "What data we collect",
+        "body": [
+          "To fulfil an order: the recipient's name, parcel machine, e-mail address and phone number. Payment data is processed by Stripe; card details never reach the shop's server.",
+          "[OWNER TO FILL IN]"
+        ]
+      },
+      {
+        "heading": "Who receives the data",
+        "body": [
+          "The payment provider (Stripe), the carrier, and the supplier who dispatches the parcel.",
+          "[OWNER TO FILL IN]"
+        ]
+      },
+      {
+        "heading": "Retention and your rights",
+        "body": [
+          "[OWNER TO FILL IN]"
+        ]
+      }
+    ]
+  },
+  "cookies": {
+    "title": "Cookies",
+    "approved": false,
+    "sections": [
+      {
+        "heading": "What the shop stores",
+        "body": [
+          "The shop stores only the contents of your cart in your browser, so that it survives from page to page. This is necessary for the shop to work and needs no consent.",
+          "The shop uses no analytics or advertising cookies.",
+          "On the payment page Stripe may use its own cookies to prevent fraud."
+        ]
+      }
+    ]
+  },
+  "returns": {
+    "title": "Returns and right of withdrawal",
+    "approved": false,
+    "sections": [
+      {
+        "heading": "14-day right of withdrawal",
+        "body": [
+          "You have the right to withdraw from an order within 14 days of receiving the goods, without giving a reason.",
+          "How to notify us, where to return the goods and who pays for the return: [OWNER TO FILL IN]",
+          "When and how the money is refunded: [OWNER TO FILL IN]"
+        ]
+      },
+      {
+        "heading": "Withdrawal form",
+        "body": [
+          "To (seller's name, address, e-mail): [OWNER TO FILL IN]",
+          "I hereby withdraw from the contract for the following goods: ______",
+          "Ordered on / received on: ______",
+          "Consumer's name: ______",
+          "Consumer's address: ______",
+          "Date: ______"
+        ]
+      }
+    ]
+  },
+  "shipping": {
+    "title": "Delivery",
+    "approved": false,
+    "sections": [
+      {
+        "heading": "Delivery methods and prices",
+        "body": [
+          "Goods are sent to the parcel machine you choose in Estonia.",
+          "Delivery prices and times: [OWNER TO FILL IN]"
+        ]
+      },
+      {
+        "heading": "Christmas orders",
+        "body": [
+          "The last day to order for delivery before Christmas is shown at the top of the page and on every product."
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "approved": false,
+    "sections": [
+      {
+        "heading": "Company details",
+        "body": [
+          "Name: [OWNER TO FILL IN]",
+          "Registry code: [OWNER TO FILL IN]",
+          "Address: [OWNER TO FILL IN]",
+          "E-mail: [OWNER TO FILL IN]",
+          "Phone: [OWNER TO FILL IN]"
+        ]
+      }
+    ]
+  }
+}

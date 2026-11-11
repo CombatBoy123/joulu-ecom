@@ -1,0 +1,142 @@
+{
+  "_note": "TODO: check ET. Kohatäited. Lõplik tekst tuleb omanikult; soovitatav lasta juristil üle vaadata. Sea iga lehe \"approved\" väärtuseks true alles siis, kui tekst on lõplik.",
+  "terms": {
+    "title": "Müügitingimused",
+    "approved": false,
+    "sections": [
+      {
+        "heading": "Müüja",
+        "body": [
+          "Ettevõtte nimi, registrikood, aadress, e-post, telefon: [TÄIDAB OMANIK]"
+        ]
+      },
+      {
+        "heading": "Hinnad ja tasumine",
+        "body": [
+          "Kõik hinnad on eurodes ja sisaldavad kehtivaid makse. Tarnekulu näidatakse ostukorvis enne maksmist.",
+          "Tasumine toimub makseteenuse Stripe turvalisel makselehel.",
+          "[TÄIDAB OMANIK]"
+        ]
+      },
+      {
+        "heading": "Tarne",
+        "body": [
+          "[TÄIDAB OMANIK]"
+        ]
+      },
+      {
+        "heading": "Taganemisõigus ja pretensioonid",
+        "body": [
+          "Tarbijal on õigus tellimusest 14 päeva jooksul põhjust avaldamata taganeda.",
+          "Pretensioonide esitamise kord ja vaidluste lahendamine: [TÄIDAB OMANIK]"
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Privaatsuspoliitika",
+    "approved": false,
+    "sections": [
+      {
+        "heading": "Vastutav töötleja",
+        "body": [
+          "[TÄIDAB OMANIK]"
+        ]
+      },
+      {
+        "heading": "Milliseid andmeid kogume",
+        "body": [
+          "Tellimuse täitmiseks: paki saaja nimi, pakiautomaat, e-posti aadress ja telefoninumber. Makseandmeid töötleb Stripe; kaardiandmed ei jõua poe serverisse.",
+          "[TÄIDAB OMANIK]"
+        ]
+      },
+      {
+        "heading": "Kellele andmeid edastame",
+        "body": [
+          "Makseteenuse pakkuja (Stripe), kullerfirma ja kauba tarnija, kes paki välja saadab.",
+          "[TÄIDAB OMANIK]"
+        ]
+      },
+      {
+        "heading": "Säilitamine ja sinu õigused",
+        "body": [
+          "[TÄIDAB OMANIK]"
+        ]
+      }
+    ]
+  },
+  "cookies": {
+    "title": "Küpsised",
+    "approved": false,
+    "sections": [
+      {
+        "heading": "Mida pood salvestab",
+        "body": [
+          "Pood salvestab sinu brauserisse ainult ostukorvi sisu, et see lehtede vahel alles püsiks. See on poe toimimiseks vajalik ega nõua nõusolekut.",
+          "Pood ei kasuta analüütika- ega reklaamiküpsiseid.",
+          "Makselehel võib Stripe kasutada oma küpsiseid pettuste ennetamiseks."
+        ]
+      }
+    ]
+  },
+  "returns": {
+    "title": "Tagastamine ja taganemisõigus",
+    "approved": false,
+    "sections": [
+      {
+        "heading": "14-päevane taganemisõigus",
+        "body": [
+          "Sul on õigus tellimusest taganeda 14 päeva jooksul alates kauba kättesaamisest, põhjust avaldamata.",
+          "Kuidas taganemisest teatada, kuhu kaup tagastada ja kes kannab tagastamiskulu: [TÄIDAB OMANIK]",
+          "Raha tagastamise tähtaeg ja viis: [TÄIDAB OMANIK]"
+        ]
+      },
+      {
+        "heading": "Taganemisavalduse vorm",
+        "body": [
+          "Saaja (müüja nimi, aadress, e-post): [TÄIDAB OMANIK]",
+          "Käesolevaga taganen lepingust, mille esemeks on järgmine kaup: ______",
+          "Tellimuse kuupäev / kauba kättesaamise kuupäev: ______",
+          "Tarbija nimi: ______",
+          "Tarbija aadress: ______",
+          "Kuupäev: ______"
+        ]
+      }
+    ]
+  },
+  "shipping": {
+    "title": "Tarne",
+    "approved": false,
+    "sections": [
+      {
+        "heading": "Tarneviisid ja hinnad",
+        "body": [
+          "Kaup saadetakse sinu valitud pakiautomaati Eestis.",
+          "Tarnehinnad ja tarneajad: [TÄIDAB OMANIK]"
+        ]
+      },
+      {
+        "heading": "Jõulutellimused",
+        "body": [
+          "Viimane tellimispäev, et pakk jõuaks jõuludeks, on näidatud lehe ülaosas ja iga toote juures."
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Kontakt",
+    "approved": false,
+    "sections": [
+      {
+        "heading": "Ettevõtte andmed",
+        "body": [
+          "Nimi: [TÄIDAB OMANIK]",
+          "Registrikood: [TÄIDAB OMANIK]",
+          "Aadress: [TÄIDAB OMANIK]",
+          "E-post: [TÄIDAB OMANIK]",
+          "Telefon: [TÄIDAB OMANIK]"
+        ]
+      }
+    ]
+  }
+}

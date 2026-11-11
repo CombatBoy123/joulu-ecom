@@ -1,0 +1,124 @@
+{
+  "_note": "English texts. Keys must match et.json exactly; the build fails otherwise.",
+  "meta": {
+    "description": "Christmas and winter gifts, delivered to parcel machines across Estonia."
+  },
+  "nav": {
+    "home": "Home",
+    "categories": "Categories",
+    "allProducts": "All products",
+    "cart": "Cart",
+    "skipToContent": "Skip to content",
+    "language": "Language",
+    "breadcrumb": "Breadcrumb",
+    "info": "Customer information",
+    "cartCount": "Cart, items: {count}"
+  },
+  "christmas": {
+    "beforeCutoff": "Last day to order for delivery before Christmas: {date}",
+    "afterCutoff": "The Christmas order deadline has passed. New orders arrive after Christmas."
+  },
+  "home": {
+    "title": "Christmas gifts and winter home",
+    "intro": "Decorations, gifts and things for a winter home. Delivered to the parcel machine you choose, anywhere in Estonia.",
+    "productsHeading": "Products",
+    "empty": "No products have been added yet."
+  },
+  "product": {
+    "delivery": "Delivery in {min}–{max} working days",
+    "deliverySame": "Delivery in {min} working days",
+    "draftBadge": "Draft",
+    "price": "Price",
+    "christmas": "Arrives before Christmas if ordered by: {date}",
+    "description": "Description",
+    "specs": "Details",
+    "material": "Material",
+    "dimensions": "Dimensions",
+    "weight": "Weight",
+    "weightValue": "{g} g",
+    "safetyHeading": "Product safety",
+    "manufacturer": "Manufacturer",
+    "euResponsiblePerson": "Responsible person in the EU",
+    "identifier": "Product identifier",
+    "warnings": "Warnings",
+    "notProvided": "Information pending",
+    "photoPending": "Photo pending",
+    "chooseOption": "Choose an option",
+    "quantity": "Quantity",
+    "addToCart": "Add to cart",
+    "added": "Added to cart.",
+    "viewCart": "View cart",
+    "pickOptionFirst": "Please choose an option first."
+  },
+  "footer": {
+    "deliveryHeading": "Delivery",
+    "delivery": "To parcel machines across Estonia: {carriers}.",
+    "returnsHeading": "Returns",
+    "returns": "You can withdraw from an order within 14 days of receiving the goods."
+  },
+  "categories": {
+    "pets": "Pets",
+    "decor": "Decorations",
+    "safety": "Safety",
+    "accessories": "Winter accessories",
+    "gift-wrap": "Gift wrapping",
+    "home": "Winter home"
+  },
+  "category": {
+    "empty": "There are no products in this category right now."
+  },
+  "cart": {
+    "title": "Cart",
+    "empty": "Your cart is empty.",
+    "continueShopping": "Continue shopping",
+    "remove": "Remove",
+    "decrease": "Decrease quantity",
+    "increase": "Increase quantity",
+    "unavailableLine": "This product is no longer available and was removed from your cart.",
+    "shippingHeading": "Delivery",
+    "parcelMachineWord": "parcel machine",
+    "shippingOption": "{carrier} parcel machine",
+    "recipientName": "Recipient's first and last name",
+    "parcelMachine": "Parcel machine name or address",
+    "parcelMachineHint": "For example: Tartu Lõunakeskus parcel machine",
+    "summaryHeading": "Summary",
+    "items": "Items",
+    "shipping": "Delivery",
+    "total": "Total",
+    "contactNote": "Your e-mail address and phone number are asked for in the next step, on the payment page.",
+    "legalNote": "By confirming the order you accept the terms of sale and take on an obligation to pay. You have the right to withdraw from the order within 14 days.",
+    "terms": "Terms of sale",
+    "returns": "Returns and right of withdrawal",
+    "pay": "Order with obligation to pay",
+    "paying": "Taking you to the payment page…",
+    "errors": {
+      "form": "Please fill in the recipient's name and the parcel machine.",
+      "payments-not-configured": "Payment is not open yet. Please try again later.",
+      "unavailable": "A product in your cart is not on sale right now.",
+      "generic": "The order could not be placed. Please try again."
+    }
+  },
+  "order": {
+    "checking": "Checking your payment…",
+    "paidTitle": "Thank you, your order is confirmed",
+    "paidBody": "We have received your payment. An order confirmation is on its way to your e-mail address.",
+    "paidTotal": "Amount paid: {total}",
+    "unpaidTitle": "Payment has not arrived yet",
+    "unpaidBody": "If you have just finished paying, confirmation can take a few minutes. Your cart is still there.",
+    "errorTitle": "The order status could not be checked",
+    "errorBody": "If the money has left your account, your order has reached us. If in doubt, please contact us.",
+    "backToCart": "Back to cart",
+    "backHome": "Back to the home page"
+  },
+  "legal": {
+    "draftNotice": "Draft. This text has not been approved by the shop owner and is not in force."
+  },
+  "email": {
+    "subject": "Your order from {shop}",
+    "greeting": "Hello {name},",
+    "body": "Thank you for your order. We have received your payment and are starting to fulfil it.",
+    "total": "Amount paid",
+    "delivery": "Parcel machine",
+    "signoff": "Best wishes"
+  }
+}

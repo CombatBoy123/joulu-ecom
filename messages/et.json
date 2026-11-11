@@ -1,0 +1,124 @@
+{
+  "_note": "TODO: check ET — every Estonian text in this file was drafted by the developer and needs the owner's review.",
+  "meta": {
+    "description": "Jõulu- ja talvekingitused, kohaletoimetamine pakiautomaati üle Eesti."
+  },
+  "nav": {
+    "home": "Avaleht",
+    "categories": "Kategooriad",
+    "allProducts": "Kõik tooted",
+    "cart": "Ostukorv",
+    "skipToContent": "Liigu sisu juurde",
+    "language": "Keel",
+    "breadcrumb": "Asukoht",
+    "info": "Kliendiinfo",
+    "cartCount": "Ostukorv, tooteid: {count}"
+  },
+  "christmas": {
+    "beforeCutoff": "Viimane tellimispäev, et pakk jõuaks jõuludeks: {date}",
+    "afterCutoff": "Jõulutellimuste tähtaeg on möödas. Uued tellimused jõuavad kohale pärast jõule."
+  },
+  "home": {
+    "title": "Jõulukingid ja talvine kodu",
+    "intro": "Kaunistused, kingitused ja talvised kodukaubad. Toome paki sinu valitud pakiautomaati üle Eesti.",
+    "productsHeading": "Tooted",
+    "empty": "Tooteid ei ole veel lisatud."
+  },
+  "product": {
+    "delivery": "Tarne {min}–{max} tööpäeva",
+    "deliverySame": "Tarne {min} tööpäeva",
+    "draftBadge": "Mustand",
+    "price": "Hind",
+    "christmas": "Jõuludeks kätte, kui tellid hiljemalt: {date}",
+    "description": "Kirjeldus",
+    "specs": "Andmed",
+    "material": "Materjal",
+    "dimensions": "Mõõdud",
+    "weight": "Kaal",
+    "weightValue": "{g} g",
+    "safetyHeading": "Tooteohutus",
+    "manufacturer": "Tootja",
+    "euResponsiblePerson": "Vastutav isik ELis",
+    "identifier": "Toote tunnus",
+    "warnings": "Hoiatused",
+    "notProvided": "Andmed lisamisel",
+    "photoPending": "Foto lisamisel",
+    "chooseOption": "Vali variant",
+    "quantity": "Kogus",
+    "addToCart": "Lisa ostukorvi",
+    "added": "Lisatud ostukorvi.",
+    "viewCart": "Vaata ostukorvi",
+    "pickOptionFirst": "Palun vali enne variant."
+  },
+  "footer": {
+    "deliveryHeading": "Tarne",
+    "delivery": "Pakiautomaati üle Eesti: {carriers}.",
+    "returnsHeading": "Tagastamine",
+    "returns": "Tellimusest saab taganeda 14 päeva jooksul alates kauba kättesaamisest."
+  },
+  "categories": {
+    "pets": "Lemmikloomad",
+    "decor": "Kaunistused",
+    "safety": "Ohutus",
+    "accessories": "Talveaksessuaarid",
+    "gift-wrap": "Kingipakendid",
+    "home": "Talvine kodu"
+  },
+  "category": {
+    "empty": "Selles kategoorias ei ole praegu tooteid."
+  },
+  "cart": {
+    "title": "Ostukorv",
+    "empty": "Ostukorv on tühi.",
+    "continueShopping": "Jätka ostlemist",
+    "remove": "Eemalda",
+    "decrease": "Vähenda kogust",
+    "increase": "Suurenda kogust",
+    "unavailableLine": "See toode ei ole enam saadaval ja eemaldati ostukorvist.",
+    "shippingHeading": "Tarne",
+    "parcelMachineWord": "pakiautomaat",
+    "shippingOption": "{carrier} pakiautomaat",
+    "recipientName": "Paki saaja ees- ja perekonnanimi",
+    "parcelMachine": "Pakiautomaadi nimi või aadress",
+    "parcelMachineHint": "Näiteks: Tartu Lõunakeskuse pakiautomaat",
+    "summaryHeading": "Kokkuvõte",
+    "items": "Tooted",
+    "shipping": "Tarne",
+    "total": "Kokku",
+    "contactNote": "E-posti aadressi ja telefoninumbrit küsitakse järgmisel sammul makselehel.",
+    "legalNote": "Tellimuse kinnitamisega nõustud müügitingimustega ja võtad kohustuse tellimuse eest tasuda. Sul on õigus tellimusest 14 päeva jooksul taganeda.",
+    "terms": "Müügitingimused",
+    "returns": "Tagastamine ja taganemisõigus",
+    "pay": "Tellin ja maksan",
+    "paying": "Suunan makselehele…",
+    "errors": {
+      "form": "Palun täida saaja nimi ja pakiautomaat.",
+      "payments-not-configured": "Maksmine ei ole veel avatud. Palun proovi hiljem uuesti.",
+      "unavailable": "Mõni ostukorvis olev toode ei ole praegu müügil.",
+      "generic": "Tellimuse esitamine ebaõnnestus. Palun proovi uuesti."
+    }
+  },
+  "order": {
+    "checking": "Kontrollin makset…",
+    "paidTitle": "Aitäh, tellimus on kinnitatud",
+    "paidBody": "Makse on laekunud. Saadame tellimuse kinnituse sinu e-posti aadressile.",
+    "paidTotal": "Tasutud summa: {total}",
+    "unpaidTitle": "Makse ei ole veel laekunud",
+    "unpaidBody": "Kui lõpetasid makse just praegu, võib kinnitus võtta mõne minuti. Ostukorv on alles.",
+    "errorTitle": "Tellimuse olekut ei õnnestunud kontrollida",
+    "errorBody": "Kui raha võeti kontolt maha, on tellimus meile jõudnud. Kahtluse korral võta meiega ühendust.",
+    "backToCart": "Tagasi ostukorvi",
+    "backHome": "Tagasi avalehele"
+  },
+  "legal": {
+    "draftNotice": "Mustand. See tekst ei ole veel poe omaniku poolt kinnitatud ega kehti."
+  },
+  "email": {
+    "subject": "Sinu tellimus poest {shop}",
+    "greeting": "Tere, {name}!",
+    "body": "Aitäh tellimuse eest. Makse on laekunud ja alustame tellimuse täitmist.",
+    "total": "Tasutud summa",
+    "delivery": "Pakiautomaat",
+    "signoff": "Parimate soovidega"
+  }
+}

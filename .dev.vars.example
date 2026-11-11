@@ -1,0 +1,15 @@
+# Secrets for the server side (worker/). Copy to .dev.vars for `npx wrangler dev`;
+# in production set the same names in Cloudflare: Worker -> Settings -> Variables and Secrets.
+# .dev.vars is git-ignored. Never commit real keys.
+
+# Stripe -> Developers -> API keys. Use the sk_test_ key until launch.
+STRIPE_SECRET_KEY=
+
+# Stripe -> Developers -> Webhooks -> endpoint https://<domain>/api/stripe-webhook
+# (events: checkout.session.completed, checkout.session.async_payment_succeeded) -> Signing secret.
+STRIPE_WEBHOOK_SECRET=
+
+# Optional: order e-mails through Resend. Without these, paid orders are only in the Stripe dashboard.
+RESEND_API_KEY=
+ORDER_EMAIL_FROM=
+ORDER_EMAIL_TO=

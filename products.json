@@ -1,0 +1,487 @@
+{
+  "_meta": {
+    "version": 1,
+    "currency": "EUR",
+    "pricesIncludeVAT": true,
+    "vatRateEE": 0.24,
+    "christmasCutoff": {
+      "chinaDirect": "2026-12-05",
+      "euWarehouse": "2026-12-15",
+      "_note": "Placeholders. Owner must confirm with the supplier's real delivery times to Estonia before launch."
+    },
+    "_rules": [
+      "Products with status 'draft' or 'blocked' must NOT be shown on the live site.",
+      "Any field that is null is unverified. Do not invent values for it.",
+      "compareAtPrice stays null unless there is a real 30-day price history (EU Omnibus rule).",
+      "Estonian text marked TODO: check ET must be reviewed by the owner."
+    ]
+  },
+  "products": [
+    {
+      "id": "pet-bandana-christmas",
+      "slug": "joulu-lemmiklooma-bandaana",
+      "status": "draft",
+      "category": "pets",
+      "name": {
+        "et": "Jõulubandaana koerale ja kassile",
+        "en": "Christmas Bandana for Dogs & Cats"
+      },
+      "shortDescription": {
+        "et": "Pidulik kolmnurkne sall lemmikloomale – ideaalne jõulupiltideks. TODO: check ET",
+        "en": "A festive triangle scarf for your pet – made for Christmas photos."
+      },
+      "description": {
+        "et": "Kolmnurkne bandaana, mis seotakse lemmiklooma kaela ümber. Suurus 43 × 43 × 65 cm. Vali kujundus ja servaviimistlus (lõigatud või palistatud serv). TODO: check ET",
+        "en": "Triangle bandana that ties around your pet's neck. Size 43 × 43 × 65 cm. Choose a design and edge finish (cut or hemmed edge)."
+      },
+      "price": 9.9,
+      "compareAtPrice": null,
+      "variants": [
+        {
+          "id": "design-tbd-cut",
+          "name": {
+            "et": "Kujundus TBD – lõigatud serv",
+            "en": "Design TBD – cut edge"
+          },
+          "supplierVariantName": "TBD (e.g. '1# Single Layer Cutting 43/43/65cm')",
+          "sku": null
+        },
+        {
+          "id": "design-tbd-hem",
+          "name": {
+            "et": "Kujundus TBD – palistatud serv",
+            "en": "Design TBD – hemmed edge"
+          },
+          "supplierVariantName": "TBD (e.g. '1# Single-layer hem 43/43/65cm')",
+          "sku": null
+        }
+      ],
+      "images": [],
+      "supplierImages": [
+        "https://shopifyfile.oss-us-west-1.aliyuncs.com/attached/pingtai/202508/DC6DD4F522B8463701A32AF20E52ABBD.jpg",
+        "https://shopifyfile.oss-us-west-1.aliyuncs.com/attached/pingtai/202508/58235F215D975E8E371EDC3E601CEBB2.jpg",
+        "https://shopifyfile.oss-us-west-1.aliyuncs.com/attached/pingtai/202508/F741340F556E4EFD4FDEE24EBB6FEC51.jpg"
+      ],
+      "specs": {
+        "material": "Nylon (per supplier listing)",
+        "dimensions": "43 × 43 × 65 cm",
+        "weightG": null
+      },
+      "supplier": {
+        "name": "EPROLO",
+        "url": "https://eprolo.com/app/product/pet-bandana-for-dogs-and-cats-thanksgiving-christmas-halloween-pet-triangle-scarf-bib",
+        "productTitle": "Pet Bandana for Dogs and Cats - Thanksgiving, Christmas, Halloween Pet Triangle Scarf Bib",
+        "unitCostEUR": null,
+        "shippingCostEUR": null,
+        "warehouse": null,
+        "processing": "Listing says shipment within 24 hours",
+        "deliveryEstimateDaysEE": null,
+        "returns": "Listing shows 7-day returns policy for apparel",
+        "notes": "Listing has 30 numbered designs and mixes Halloween/Thanksgiving/Christmas – pick only Christmas designs from the images. Listing warns EU orders carry extra tax of at least 6 USD per order."
+      },
+      "safety": {
+        "manufacturerName": null,
+        "manufacturerAddress": null,
+        "euResponsiblePersonName": null,
+        "euResponsiblePersonAddress": null,
+        "productIdentifier": null,
+        "warnings": {
+          "et": "Kasutada ainult järelevalve all. Mitte jätta lemmiklooma bandaanaga järelevalveta. TODO: check ET",
+          "en": "Use only under supervision. Do not leave your pet unattended while wearing the bandana."
+        },
+        "certifications": []
+      },
+      "tags": [
+        "christmas",
+        "pets",
+        "gift",
+        "under-10"
+      ]
+    },
+    {
+      "id": "christmas-stocking-decoration",
+      "slug": "jouluisuke-kaunistus",
+      "status": "draft",
+      "category": "decor",
+      "name": {
+        "et": "Tikitud jõulusokk (kaunistus)",
+        "en": "Embroidered Christmas Stocking (Decoration)"
+      },
+      "shortDescription": {
+        "et": "Riputatav jõulusokk kingitusteks ja kaunistuseks. TODO: check ET",
+        "en": "Hanging Christmas stocking for small gifts and decoration."
+      },
+      "description": {
+        "et": "Tikitud mustriga riidest jõulusokk, mida saab riputada kaminale, uksele või kuuse külge. Neli värvi. TODO: check ET",
+        "en": "Cloth Christmas stocking with an embroidered pattern – hang it on a mantel, door or tree. Four colours."
+      },
+      "price": 8.9,
+      "compareAtPrice": null,
+      "variants": [
+        {
+          "id": "red",
+          "name": {
+            "et": "Punane",
+            "en": "Red"
+          },
+          "supplierVariantName": "Red hot stamping socks 01",
+          "sku": null
+        },
+        {
+          "id": "green",
+          "name": {
+            "et": "Roheline",
+            "en": "Green"
+          },
+          "supplierVariantName": "Green hot stamping socks 02",
+          "sku": null
+        },
+        {
+          "id": "grey",
+          "name": {
+            "et": "Hall",
+            "en": "Grey"
+          },
+          "supplierVariantName": "Grey hot stamping socks 03",
+          "sku": null
+        },
+        {
+          "id": "dark-red",
+          "name": {
+            "et": "Tumepunane",
+            "en": "Dark red"
+          },
+          "supplierVariantName": "Date red hot stamping socks 04",
+          "sku": null
+        }
+      ],
+      "images": [],
+      "supplierImages": [
+        "https://shopifyfile.oss-us-west-1.aliyuncs.com/attached/pingtai/202410/C7D73003F292C51C50B78926F0F5A692.jpg",
+        "https://shopifyfile.oss-us-west-1.aliyuncs.com/attached/pingtai/202410/E41F0EC956F813D5063D11ED658238A2.jpg",
+        "https://shopifyfile.oss-us-west-1.aliyuncs.com/attached/pingtai/202410/2C893F389C46A7DAFCEB0486B261F753.jpg",
+        "https://shopifyfile.oss-us-west-1.aliyuncs.com/attached/pingtai/202410/B481618B46C8834B1BEAFDC204150171.jpg",
+        "https://shopifyfile.oss-us-west-1.aliyuncs.com/attached/pingtai/202410/D7B252C0E56171C6CA865B54F8F7CA33.jpg"
+      ],
+      "specs": {
+        "material": "Cloth (per supplier listing – exact fibre unknown)",
+        "dimensions": null,
+        "weightG": null
+      },
+      "supplier": {
+        "name": "EPROLO",
+        "url": "https://eprolo.com/app/product/christmas-stocking-decorations-embroidered-decorations-christmas-hot-stamped-socks",
+        "productTitle": "Christmas Stocking Decorations Embroidered Decorations Christmas Hot Stamped Socks",
+        "unitCostEUR": null,
+        "shippingCostEUR": null,
+        "warehouse": null,
+        "processing": "Listing says shipment within 24 hours",
+        "deliveryEstimateDaysEE": null,
+        "returns": null,
+        "notes": "Title suggests a HANGING decorative stocking, not wearable socks – confirm from images before listing. Listing warns EU orders carry extra tax of at least 6 USD per order."
+      },
+      "safety": {
+        "manufacturerName": null,
+        "manufacturerAddress": null,
+        "euResponsiblePersonName": null,
+        "euResponsiblePersonAddress": null,
+        "productIdentifier": null,
+        "warnings": {
+          "et": "Dekoratsioon, mitte mänguasi. Hoida eemal lahtisest tulest. TODO: check ET",
+          "en": "Decoration, not a toy. Keep away from open flames."
+        },
+        "certifications": []
+      },
+      "tags": [
+        "christmas",
+        "decor",
+        "gift-wrap"
+      ]
+    },
+    {
+      "id": "felt-ornament-set",
+      "slug": "vildist-kuuseehete-komplekt",
+      "status": "draft",
+      "category": "decor",
+      "name": {
+        "et": "Vildist kuuseehete komplekt",
+        "en": "Felt Christmas Ornament Set"
+      },
+      "shortDescription": {
+        "et": "Purunematud vildist kuuseehted – sobivad ka lastega kodudesse. TODO: check ET",
+        "en": "Unbreakable felt tree ornaments – great for homes with kids and pets."
+      },
+      "description": {
+        "et": "TODO – kirjuta pärast tarnija valimist (tükkide arv, mõõdud, materjal). TODO: check ET",
+        "en": "TODO – write after supplier is chosen (piece count, sizes, material)."
+      },
+      "price": 14.9,
+      "compareAtPrice": null,
+      "variants": [],
+      "images": [],
+      "supplierImages": [],
+      "specs": {
+        "material": null,
+        "dimensions": null,
+        "weightG": null
+      },
+      "supplier": {
+        "name": null,
+        "url": null,
+        "productTitle": null,
+        "unitCostEUR": null,
+        "shippingCostEUR": null,
+        "warehouse": null,
+        "processing": null,
+        "deliveryEstimateDaysEE": null,
+        "returns": null,
+        "notes": "No dropship supplier verified yet. Search CJdropshipping / EPROLO for 'felt Christmas ornament set' and filter for EU warehouse stock."
+      },
+      "safety": {
+        "manufacturerName": null,
+        "manufacturerAddress": null,
+        "euResponsiblePersonName": null,
+        "euResponsiblePersonAddress": null,
+        "productIdentifier": null,
+        "warnings": {
+          "et": "Dekoratsioon, mitte mänguasi. Sisaldab väikseid osi – hoida alla 3-aastastest lastest eemal. TODO: check ET",
+          "en": "Decoration, not a toy. Contains small parts – keep away from children under 3."
+        },
+        "certifications": []
+      },
+      "tags": [
+        "christmas",
+        "decor",
+        "ornaments"
+      ]
+    },
+    {
+      "id": "christmas-reflector",
+      "slug": "jouluhelkur",
+      "status": "blocked",
+      "category": "safety",
+      "name": {
+        "et": "Jõuluhelkur (kuusekujuline)",
+        "en": "Christmas Tree Reflector"
+      },
+      "shortDescription": {
+        "et": "Kuusekujuline helkur – ohutus ja jõulutuju ühes. TODO: check ET",
+        "en": "Christmas-tree-shaped pedestrian reflector."
+      },
+      "description": {
+        "et": "TODO – kirjuta alles pärast sertifikaadi kontrollimist. TODO: check ET",
+        "en": "TODO – write only after the certificate has been checked."
+      },
+      "price": 4.9,
+      "compareAtPrice": null,
+      "variants": [],
+      "images": [],
+      "supplierImages": [],
+      "specs": {
+        "material": null,
+        "dimensions": null,
+        "weightG": null
+      },
+      "supplier": {
+        "name": null,
+        "url": null,
+        "productTitle": null,
+        "unitCostEUR": null,
+        "shippingCostEUR": null,
+        "warehouse": null,
+        "processing": null,
+        "deliveryEstimateDaysEE": null,
+        "returns": null,
+        "notes": "BLOCKED: only found US retail listings (e.g. Uxcell tree-shaped reflectors on Walmart) with no evidence of the EU pedestrian reflector standard. Do not sell as a safety reflector until a supplier provides a valid EN 17353 / EN 13356 certificate and CE declaration. Consider an EU/Estonian wholesaler instead of China dropship."
+      },
+      "safety": {
+        "manufacturerName": null,
+        "manufacturerAddress": null,
+        "euResponsiblePersonName": null,
+        "euResponsiblePersonAddress": null,
+        "productIdentifier": null,
+        "warnings": {
+          "et": null,
+          "en": null
+        },
+        "certifications": []
+      },
+      "tags": [
+        "christmas",
+        "safety",
+        "stocking-stuffer"
+      ]
+    },
+    {
+      "id": "christmas-beanie-scarf",
+      "slug": "joulumuts-ja-sall",
+      "status": "draft",
+      "category": "accessories",
+      "name": {
+        "et": "Jõulumüts ja sall",
+        "en": "Christmas Beanie & Scarf"
+      },
+      "shortDescription": {
+        "et": "TODO – kirjuta pärast tarnija valimist. TODO: check ET",
+        "en": "TODO – write after a supplier is chosen."
+      },
+      "description": {
+        "et": "TODO – kirjuta pärast tarnija valimist (materjal, mõõdud, komplekti sisu). TODO: check ET",
+        "en": "TODO – write after a supplier is chosen (material, sizes, what is included)."
+      },
+      "price": 14.9,
+      "compareAtPrice": null,
+      "variants": [],
+      "images": [],
+      "supplierImages": [],
+      "specs": {
+        "material": null,
+        "dimensions": null,
+        "weightG": null
+      },
+      "supplier": {
+        "name": null,
+        "url": null,
+        "productTitle": null,
+        "unitCostEUR": null,
+        "shippingCostEUR": null,
+        "warehouse": null,
+        "processing": null,
+        "deliveryEstimateDaysEE": null,
+        "returns": null,
+        "notes": "From PRODUCTS.md section 4 (next products to research). No supplier verified. The price is a placeholder, not based on any cost — set it once unit and shipping costs are known."
+      },
+      "safety": {
+        "manufacturerName": null,
+        "manufacturerAddress": null,
+        "euResponsiblePersonName": null,
+        "euResponsiblePersonAddress": null,
+        "productIdentifier": null,
+        "warnings": {
+          "et": null,
+          "en": null
+        },
+        "certifications": []
+      },
+      "tags": [
+        "christmas",
+        "accessories",
+        "gift"
+      ]
+    },
+    {
+      "id": "gift-bag-tag-set",
+      "slug": "kinkekottide-ja-siltide-komplekt",
+      "status": "draft",
+      "category": "gift-wrap",
+      "name": {
+        "et": "Kinkekottide ja -siltide komplekt",
+        "en": "Gift Bag & Tag Set"
+      },
+      "shortDescription": {
+        "et": "TODO – kirjuta pärast tarnija valimist. TODO: check ET",
+        "en": "TODO – write after a supplier is chosen."
+      },
+      "description": {
+        "et": "TODO – kirjuta pärast tarnija valimist (materjal, mõõdud, komplekti sisu). TODO: check ET",
+        "en": "TODO – write after a supplier is chosen (material, sizes, what is included)."
+      },
+      "price": 6.9,
+      "compareAtPrice": null,
+      "variants": [],
+      "images": [],
+      "supplierImages": [],
+      "specs": {
+        "material": null,
+        "dimensions": null,
+        "weightG": null
+      },
+      "supplier": {
+        "name": null,
+        "url": null,
+        "productTitle": null,
+        "unitCostEUR": null,
+        "shippingCostEUR": null,
+        "warehouse": null,
+        "processing": null,
+        "deliveryEstimateDaysEE": null,
+        "returns": null,
+        "notes": "From PRODUCTS.md section 4 (next products to research). No supplier verified. The price is a placeholder, not based on any cost — set it once unit and shipping costs are known."
+      },
+      "safety": {
+        "manufacturerName": null,
+        "manufacturerAddress": null,
+        "euResponsiblePersonName": null,
+        "euResponsiblePersonAddress": null,
+        "productIdentifier": null,
+        "warnings": {
+          "et": null,
+          "en": null
+        },
+        "certifications": []
+      },
+      "tags": [
+        "christmas",
+        "gift-wrap",
+        "add-on"
+      ]
+    },
+    {
+      "id": "throw-blanket",
+      "slug": "pehme-pleed",
+      "status": "draft",
+      "category": "home",
+      "name": {
+        "et": "Pehme pleed",
+        "en": "Throw Blanket"
+      },
+      "shortDescription": {
+        "et": "TODO – kirjuta pärast tarnija valimist. TODO: check ET",
+        "en": "TODO – write after a supplier is chosen."
+      },
+      "description": {
+        "et": "TODO – kirjuta pärast tarnija valimist (materjal, mõõdud, komplekti sisu). TODO: check ET",
+        "en": "TODO – write after a supplier is chosen (material, sizes, what is included)."
+      },
+      "price": 29.9,
+      "compareAtPrice": null,
+      "variants": [],
+      "images": [],
+      "supplierImages": [],
+      "specs": {
+        "material": null,
+        "dimensions": null,
+        "weightG": null
+      },
+      "supplier": {
+        "name": null,
+        "url": null,
+        "productTitle": null,
+        "unitCostEUR": null,
+        "shippingCostEUR": null,
+        "warehouse": null,
+        "processing": null,
+        "deliveryEstimateDaysEE": null,
+        "returns": null,
+        "notes": "From PRODUCTS.md section 4 (next products to research). No supplier verified. The price is a placeholder, not based on any cost — set it once unit and shipping costs are known."
+      },
+      "safety": {
+        "manufacturerName": null,
+        "manufacturerAddress": null,
+        "euResponsiblePersonName": null,
+        "euResponsiblePersonAddress": null,
+        "productIdentifier": null,
+        "warnings": {
+          "et": null,
+          "en": null
+        },
+        "certifications": []
+      },
+      "tags": [
+        "winter",
+        "home",
+        "gift"
+      ]
+    }
+  ]
+}
