@@ -12,17 +12,40 @@
     "language": "Keel",
     "breadcrumb": "Asukoht",
     "info": "Kliendiinfo",
-    "cartCount": "Ostukorv, tooteid: {count}"
+    "cartCount": "Ostukorv, tooteid: {count}",
+    "menu": "Menüü"
   },
   "christmas": {
     "beforeCutoff": "Viimane tellimispäev, et pakk jõuaks jõuludeks: {date}",
     "afterCutoff": "Jõulutellimuste tähtaeg on möödas. Uued tellimused jõuavad kohale pärast jõule."
   },
   "home": {
-    "title": "Jõulukingid ja talvine kodu",
     "intro": "Kaunistused, kingitused ja talvised kodukaubad. Toome paki sinu valitud pakiautomaati üle Eesti.",
-    "productsHeading": "Tooted",
-    "empty": "Tooteid ei ole veel lisatud."
+    "empty": "Tooteid ei ole veel lisatud.",
+    "eyebrow": "Jõulud ja talv",
+    "titleLead": "Jõulukingid ja",
+    "titleAccent": "talvine kodu.",
+    "cta": "Vaata tooteid",
+    "categoriesEyebrow": "Kategooriad",
+    "categoriesTitle": "Leia sobiv,",
+    "categoriesTitleAccent": "kategooria kaupa.",
+    "productsEyebrow": "Valik",
+    "productsTitle": "Tooted",
+    "productsTitleAccent": "selleks hooajaks.",
+    "facts": [
+      {
+        "title": "Pakiautomaati üle Eesti",
+        "body": "Vali ostukorvis endale sobiv Omniva, DPD või Smartposti pakiautomaat."
+      },
+      {
+        "title": "14 päeva taganemisõigust",
+        "body": "Kui toode ei sobi, saad tellimusest 14 päeva jooksul taganeda."
+      },
+      {
+        "title": "Turvaline maksmine",
+        "body": "Makse toimub Stripe'i makselehel. Kaardiandmed ei jõua poe serverisse."
+      }
+    ]
   },
   "product": {
     "delivery": "Tarne {min}–{max} tööpäeva",
@@ -48,13 +71,17 @@
     "addToCart": "Lisa ostukorvi",
     "added": "Lisatud ostukorvi.",
     "viewCart": "Vaata ostukorvi",
-    "pickOptionFirst": "Palun vali enne variant."
+    "pickOptionFirst": "Palun vali enne variant.",
+    "view": "Vaata"
   },
   "footer": {
     "deliveryHeading": "Tarne",
     "delivery": "Pakiautomaati üle Eesti: {carriers}.",
     "returnsHeading": "Tagastamine",
-    "returns": "Tellimusest saab taganeda 14 päeva jooksul alates kauba kättesaamisest."
+    "returns": "Tellimusest saab taganeda 14 päeva jooksul alates kauba kättesaamisest.",
+    "tagline": "Jõulukaunistused, kingitused ja talvised kodukaubad, pakiautomaati üle Eesti.",
+    "shop": "Pood",
+    "info": "Kliendiinfo"
   },
   "categories": {
     "pets": "Lemmikloomad",
@@ -120,5 +147,8 @@
     "total": "Tasutud summa",
     "delivery": "Pakiautomaat",
     "signoff": "Parimate soovidega"
+  },
+  "preview": {
+    "notice": "Eelvaade: pood ei ole veel avatud. Mustandiks märgitud tooteid ei saa osta ning nende hinnad ja tekstid võivad muutuda."
   }
 }

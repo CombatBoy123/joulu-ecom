@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { AddToCart } from "@/components/AddToCart";
+import { ProductMedia } from "@/components/ProductCard";
 import { ChristmasBanner } from "@/components/ChristmasBanner";
 import { shop } from "@/config/shop";
 import { christmasBannerState } from "@/lib/christmas";
 import { categoryName, fill, formatDayMonth, formatPrice, getMessages, pick, type Locale } from "@/lib/i18n";
 import { priceCents } from "@/lib/product-schema";
-import { deliveryText, PLACEHOLDER_IMAGE, productCutoff } from "@/lib/product-view";
+import { deliveryText, productCutoff } from "@/lib/product-view";
 import { getProduct } from "@/lib/products";
 import { routes } from "@/lib/routes";
 
@@ -46,7 +47,7 @@ export function ProductPage({ locale, slug }: { locale: Locale; slug: string }) 
   const warnings = pick(safety.warnings, locale, `${product.id} warnings`);
 
   return (
-    <article className="product">
+    <article className="product container page">
       <nav className="breadcrumb" aria-label={m.nav.breadcrumb}>
         <a href={routes.home(locale)}>{m.nav.home}</a>
         <span aria-hidden="true"> / </span>
@@ -55,13 +56,9 @@ export function ProductPage({ locale, slug }: { locale: Locale; slug: string }) 
 
       <div className="product__layout">
         <div className="product__gallery">
-          <img
-            className="product__image"
-            src={images?.[0] ?? PLACEHOLDER_IMAGE}
-            alt={images ? name : m.product.photoPending}
-            width={800}
-            height={800}
-          />
+          <div className="product__image">
+            <ProductMedia product={product} name={name} m={m} eager size={800} />
+          </div>
           {images && images.length > 1 && (
             <ul className="product__thumbs">
               {images.slice(1).map((src, i) => (
@@ -74,7 +71,8 @@ export function ProductPage({ locale, slug }: { locale: Locale; slug: string }) 
         </div>
 
         <div className="product__buy">
-          {product.status === "draft" && <span className="draft-badge draft-badge--inline">{m.product.draftBadge}</span>}
+          {product.status === "draft" && <span className="badge badge--inline">{m.product.draftBadge}</span>}
+          <p className="eyebrow">{categoryName(product.category, m)}</p>
           <h1>{name}</h1>
           <p className="product__short">{pick(product.shortDescription, locale)}</p>
 

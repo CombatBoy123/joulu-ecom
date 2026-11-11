@@ -4,10 +4,12 @@ import { routes } from "@/lib/routes";
 
 export function OrderPage({ locale }: { locale: Locale }) {
   return (
-    <OrderStatus
+    <div className="container page">
+      <OrderStatus
       locale={locale}
       m={getMessages(locale).order}
-      links={{ home: routes.home(locale), cart: routes.cart(locale) }}
-    />
+        links={{ home: routes.home(locale), cart: routes.cart(locale) }}
+      />
+    </div>
   );
 }

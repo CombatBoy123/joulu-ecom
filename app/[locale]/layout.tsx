@@ -1,23 +1,31 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
-import { Fraunces, Libre_Franklin } from "next/font/google";
+import { Cormorant_Garamond, Inter } from "next/font/google";
 import { notFound } from "next/navigation";
-import { ChristmasBanner } from "@/components/ChristmasBanner";
 import { CartLink } from "@/components/CartLink";
+import { ChristmasBanner } from "@/components/ChristmasBanner";
 import { LanguageSwitch } from "@/components/LanguageSwitch";
+import { Logo } from "@/components/Logo";
+import { Snowfall } from "@/components/Snowfall";
 import { shop } from "@/config/shop";
 import { christmasBannerState } from "@/lib/christmas";
 import { categoryName, fill, formatDayMonth, getMessages, isLocale, LOCALE_NAMES, LOCALES } from "@/lib/i18n";
+import { getLegalPage } from "@/lib/legal";
 import { shopCutoff } from "@/lib/product-view";
 import { categories } from "@/lib/products";
-import { getLegalPage } from "@/lib/legal";
 import { LEGAL_PAGE_IDS, routes } from "@/lib/routes";
 import "../globals.css";
 
 // Downloaded when the site is built and served from our own domain: the
 // visitor's browser never contacts Google.
-const heading = Fraunces({ subsets: ["latin", "latin-ext"], variable: "--font-heading", display: "swap" });
-const body = Libre_Franklin({ subsets: ["latin", "latin-ext"], variable: "--font-body", display: "swap" });
+const heading = Cormorant_Garamond({
+  subsets: ["latin", "latin-ext"],
+  weight: ["500", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-heading",
+  display: "swap",
+});
+const body = Inter({ subsets: ["latin", "latin-ext"], variable: "--font-body", display: "swap" });
 
 type Props = { children: ReactNode; params: Promise<{ locale: string }> };
 
@@ -28,7 +36,7 @@ export function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
 }
 
-export const viewport: Viewport = { themeColor: "#7a1418" };
+export const viewport: Viewport = { themeColor: "#100b09" };
 
 export async function generateMetadata({ params }: Pick<Props, "params">): Promise<Metadata> {
   const { locale } = await params;
@@ -40,6 +48,8 @@ export async function generateMetadata({ params }: Pick<Props, "params">): Promi
     alternates: {
       languages: Object.fromEntries(LOCALES.map((l) => [l, routes.home(l)])),
     },
+    // A shop that is showing drafts is not open and must not be indexed.
+    robots: shop.previewDrafts ? { index: false, follow: false } : undefined,
   };
 }
 
@@ -53,9 +63,11 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} className={`${heading.variable} ${body.variable}`}>
       <body>
+        <Snowfall />
         <a className="skip-link" href="#content">
           {m.nav.skipToContent}
         </a>
+        {shop.previewDrafts && <p className="preview-notice">{m.preview.notice}</p>}
         <ChristmasBanner
           className="christmas-banner"
           config={christmas}
@@ -64,10 +76,19 @@ export default async function LocaleLayout({ children, params }: Props) {
           afterText={m.christmas.afterCutoff}
         />
         <header className="site-header">
-          <div className="site-header__bar">
-            <a className="site-name" href={routes.home(locale)}>
-              {shop.name}
-            </a>
+          <div className="container site-header__bar">
+            <Logo href={routes.home(locale)} name={shop.name} />
+            {categories.length > 0 && (
+              <nav className="site-nav" aria-label={m.nav.categories}>
+                <ul>
+                  {categories.map((slug) => (
+                    <li key={slug}>
+                      <a href={routes.category(locale, slug)}>{categoryName(slug, m)}</a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            )}
             <div className="site-header__tools">
               <nav aria-label={m.nav.language}>
                 <LanguageSwitch locale={locale} names={LOCALE_NAMES} />
@@ -75,41 +96,43 @@ export default async function LocaleLayout({ children, params }: Props) {
               <CartLink href={routes.cart(locale)} label={m.nav.cart} countLabel={m.nav.cartCount} />
             </div>
           </div>
-          <div className="awning" aria-hidden="true" />
-          {categories.length > 0 && (
-            <nav className="category-nav" aria-label={m.nav.categories}>
+        </header>
+        <main id="content">{children}</main>
+        <footer className="site-footer">
+          <div className="container site-footer__grid">
+            <div className="site-footer__brand">
+              <Logo href={routes.home(locale)} name={shop.name} />
+              <p>{m.footer.tagline}</p>
+            </div>
+            {categories.length > 0 && (
+              <nav aria-label={m.footer.shop}>
+                <h2>{m.footer.shop}</h2>
+                <ul>
+                  {categories.map((slug) => (
+                    <li key={slug}>
+                      <a href={routes.category(locale, slug)}>{categoryName(slug, m)}</a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            )}
+            <nav aria-label={m.footer.info}>
+              <h2>{m.footer.info}</h2>
               <ul>
-                {categories.map((slug) => (
-                  <li key={slug}>
-                    <a href={routes.category(locale, slug)}>{categoryName(slug, m)}</a>
+                {LEGAL_PAGE_IDS.map((id) => (
+                  <li key={id}>
+                    <a href={routes.legal(locale, id)}>{getLegalPage(locale, id).title}</a>
                   </li>
                 ))}
               </ul>
             </nav>
-          )}
-        </header>
-        <main id="content">{children}</main>
-        <footer className="site-footer">
-          <dl>
             <div>
-              <dt>{m.footer.deliveryHeading}</dt>
-              <dd>{fill(m.footer.delivery, { carriers })}</dd>
+              <h2>{m.footer.deliveryHeading}</h2>
+              <p>{fill(m.footer.delivery, { carriers })}</p>
+              <h2>{m.footer.returnsHeading}</h2>
+              <p>{m.footer.returns}</p>
             </div>
-            <div>
-              <dt>{m.footer.returnsHeading}</dt>
-              <dd>{m.footer.returns}</dd>
-            </div>
-          </dl>
-          <nav className="site-footer__links" aria-label={m.nav.info}>
-            <ul>
-              {LEGAL_PAGE_IDS.map((id) => (
-                <li key={id}>
-                  <a href={routes.legal(locale, id)}>{getLegalPage(locale, id).title}</a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-          <p className="site-footer__name">{shop.name}</p>
+          </div>
         </footer>
       </body>
     </html>

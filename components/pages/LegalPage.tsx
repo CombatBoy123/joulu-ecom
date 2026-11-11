@@ -15,7 +15,7 @@ export function legalMetadata(locale: Locale, id: LegalPageId): Metadata {
 export function LegalPage({ locale, id }: { locale: Locale; id: LegalPageId }) {
   const page = getLegalPage(locale, id);
   return (
-    <article className="legal">
+    <article className="legal container page">
       <div className="page-intro">
         <h1>{page.title}</h1>
       </div>

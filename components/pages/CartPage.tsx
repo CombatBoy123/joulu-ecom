@@ -9,7 +9,7 @@ import { routes } from "@/lib/routes";
 export function CartPage({ locale }: { locale: Locale }) {
   const m = getMessages(locale);
   return (
-    <>
+    <div className="container page">
       <div className="page-intro">
         <h1>{m.cart.title}</h1>
       </div>
@@ -27,6 +27,6 @@ export function CartPage({ locale }: { locale: Locale }) {
           product: Object.fromEntries(products.map((p) => [p.id, routes.product(locale, p.slug)])),
         }}
       />
-    </>
+    </div>
   );
 }

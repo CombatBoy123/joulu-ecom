@@ -19,14 +19,14 @@ export function CategoryPage({ locale, slug }: { locale: Locale; slug: string })
   const items = getProductsInCategory(slug);
 
   return (
-    <>
+    <div className="container page">
       <nav className="breadcrumb" aria-label={m.nav.breadcrumb}>
         <a href={routes.home(locale)}>{m.nav.home}</a>
       </nav>
       <div className="page-intro">
         <h1>{categoryName(slug, m)}</h1>
       </div>
-      {items.length === 0 ? <p>{m.category.empty}</p> : <ProductGrid items={items} locale={locale} m={m} />}
-    </>
+      {items.length === 0 ? <p className="muted">{m.category.empty}</p> : <ProductGrid items={items} locale={locale} m={m} />}
+    </div>
   );
 }

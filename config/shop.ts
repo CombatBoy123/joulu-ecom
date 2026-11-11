@@ -3,8 +3,17 @@
 // confirmed by the owner before launch.
 
 export const shop = {
-  /** TODO(owner): shop name, legal entity and contact details. */
-  name: "Jõulupood",
+  /** TODO(owner): confirm the shop name; legal entity and contact details are still missing. */
+  name: "Noël",
+
+  /**
+   * Before launch: also show "draft" products on the built site, marked as
+   * drafts, so the shop can be looked at with products in it. While this is
+   * on, the whole site is hidden from search engines and carries a "preview"
+   * notice. Drafts still cannot be bought: the server only sells "active".
+   * TODO(owner): set to false before the shop opens.
+   */
+  previewDrafts: true,
 
   currency: "EUR",
 

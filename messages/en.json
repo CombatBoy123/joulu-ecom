@@ -12,17 +12,40 @@
     "language": "Language",
     "breadcrumb": "Breadcrumb",
     "info": "Customer information",
-    "cartCount": "Cart, items: {count}"
+    "cartCount": "Cart, items: {count}",
+    "menu": "Menu"
   },
   "christmas": {
     "beforeCutoff": "Last day to order for delivery before Christmas: {date}",
     "afterCutoff": "The Christmas order deadline has passed. New orders arrive after Christmas."
   },
   "home": {
-    "title": "Christmas gifts and winter home",
     "intro": "Decorations, gifts and things for a winter home. Delivered to the parcel machine you choose, anywhere in Estonia.",
-    "productsHeading": "Products",
-    "empty": "No products have been added yet."
+    "empty": "No products have been added yet.",
+    "eyebrow": "Christmas and winter",
+    "titleLead": "Christmas gifts and",
+    "titleAccent": "a winter home.",
+    "cta": "See the products",
+    "categoriesEyebrow": "Categories",
+    "categoriesTitle": "Find the right one,",
+    "categoriesTitleAccent": "category by category.",
+    "productsEyebrow": "Selection",
+    "productsTitle": "Products",
+    "productsTitleAccent": "for this season.",
+    "facts": [
+      {
+        "title": "To parcel machines across Estonia",
+        "body": "Choose the Omniva, DPD or Smartpost parcel machine that suits you in the cart."
+      },
+      {
+        "title": "14-day right of withdrawal",
+        "body": "If a product does not suit you, you can withdraw from the order within 14 days."
+      },
+      {
+        "title": "Secure payment",
+        "body": "Payment is made on Stripe's payment page. Card details never reach the shop's server."
+      }
+    ]
   },
   "product": {
     "delivery": "Delivery in {min}–{max} working days",
@@ -48,13 +71,17 @@
     "addToCart": "Add to cart",
     "added": "Added to cart.",
     "viewCart": "View cart",
-    "pickOptionFirst": "Please choose an option first."
+    "pickOptionFirst": "Please choose an option first.",
+    "view": "View"
   },
   "footer": {
     "deliveryHeading": "Delivery",
     "delivery": "To parcel machines across Estonia: {carriers}.",
     "returnsHeading": "Returns",
-    "returns": "You can withdraw from an order within 14 days of receiving the goods."
+    "returns": "You can withdraw from an order within 14 days of receiving the goods.",
+    "tagline": "Christmas decorations, gifts and things for a winter home, to parcel machines across Estonia.",
+    "shop": "Shop",
+    "info": "Customer information"
   },
   "categories": {
     "pets": "Pets",
@@ -120,5 +147,8 @@
     "total": "Amount paid",
     "delivery": "Parcel machine",
     "signoff": "Best wishes"
+  },
+  "preview": {
+    "notice": "Preview: the shop is not open yet. Products marked as drafts cannot be bought, and their prices and texts may change."
   }
 }

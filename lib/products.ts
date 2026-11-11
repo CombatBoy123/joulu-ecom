@@ -1,5 +1,6 @@
 import raw from "@/products.json";
 import et from "@/messages/et.json";
+import { shop } from "@/config/shop";
 import { validateCatalog, type Catalog, type CatalogMeta, type Product } from "./product-schema";
 
 // Runs once when the site is built (and on every reload in `npm run dev`).
@@ -18,11 +19,12 @@ const catalog = raw as unknown as Catalog;
 export const meta: CatalogMeta = catalog._meta;
 
 /**
- * Local preview (`npm run dev`) also lists drafts, marked with a badge.
- * The built site only ever contains active products; blocked ones are never
- * exposed by this module at all.
+ * Drafts are listed, marked with a badge, in local preview (`npm run dev`)
+ * and, before launch, on the built site while config/shop.ts has
+ * previewDrafts on. Otherwise only active products exist. Blocked products
+ * are never exposed by this module at all.
  */
-export const isPreview = process.env.NODE_ENV === "development";
+export const isPreview = process.env.NODE_ENV === "development" || shop.previewDrafts;
 
 export const products: Product[] = catalog.products.filter(
   (p) => p.status === "active" || (isPreview && p.status === "draft"),

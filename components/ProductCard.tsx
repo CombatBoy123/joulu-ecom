@@ -1,6 +1,9 @@
+import ProductArt from "@/components/art/ProductArt";
+import { Arrow } from "@/components/Logo";
+import { placeholderArt } from "@/lib/art";
 import { categoryName, formatPrice, pick, type Locale, type Messages } from "@/lib/i18n";
 import { priceCents, type Product } from "@/lib/product-schema";
-import { deliveryText, PLACEHOLDER_IMAGE } from "@/lib/product-view";
+import { deliveryText } from "@/lib/product-view";
 import { routes } from "@/lib/routes";
 
 interface Props {
@@ -11,28 +14,37 @@ interface Props {
   eager?: boolean;
 }
 
+/** The product's photo, or an illustration standing in until there is one. */
+export function ProductMedia({ product, name, m, eager, size }: { product: Product; name: string; m: Messages; eager?: boolean; size: number }) {
+  const image = product.images[0];
+  if (image) {
+    return <img src={image} alt={name} width={size} height={size} loading={eager ? "eager" : "lazy"} decoding="async" />;
+  }
+  return <ProductArt {...placeholderArt(product)} className="art" label={m.product.photoPending} />;
+}
+
 export function ProductCard({ product, locale, m, eager = false }: Props) {
   const name = pick(product.name, locale, `${product.id} name`);
-  const image = product.images[0];
+  const href = routes.product(locale, product.slug);
   return (
-    <li className="product-card">
-      <a href={routes.product(locale, product.slug)}>
-        <span className="product-card__image">
-          <img
-            src={image ?? PLACEHOLDER_IMAGE}
-            alt={image ? name : m.product.photoPending}
-            width={400}
-            height={400}
-            loading={eager ? "eager" : "lazy"}
-            decoding="async"
-          />
-          {product.status === "draft" && <span className="draft-badge">{m.product.draftBadge}</span>}
-        </span>
-        <span className="product-card__category">{categoryName(product.category, m)}</span>
-        <span className="product-card__name">{name}</span>
+    <li className="pcard">
+      <a className="pcard__media" href={href} tabIndex={-1} aria-hidden="true">
+        <ProductMedia product={product} name="" m={m} eager={eager} size={480} />
+        {product.status === "draft" && <span className="badge">{m.product.draftBadge}</span>}
       </a>
-      <p className="product-card__price">{formatPrice(priceCents(product), locale)}</p>
-      <p className="product-card__delivery">{deliveryText(product, m)}</p>
+      <div className="pcard__body">
+        <span className="pcard__cat">{categoryName(product.category, m)}</span>
+        <h3 className="pcard__name">
+          <a href={href}>{name}</a>
+        </h3>
+        <p className="pcard__delivery">{deliveryText(product, m)}</p>
+        <div className="pcard__foot">
+          <span className="pcard__price">{formatPrice(priceCents(product), locale)}</span>
+          <a className="pill" href={href} aria-label={`${m.product.view}: ${name}`}>
+            {m.product.view} <Arrow />
+          </a>
+        </div>
+      </div>
     </li>
   );
 }

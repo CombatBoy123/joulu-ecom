@@ -20,7 +20,7 @@ If a field is still blank, ask me before choosing. Prefer the simplest option th
 
 ## Commands
 - `npm run dev` — local preview at http://localhost:3000; also lists `draft` products, marked with a badge
-- `npm run build` — static site into `out/`, `active` products only; stops with a list of problems if `products.json` is malformed or an `active` product is not ready to be sold
+- `npm run build` — static site into `out/`, `active` products only (plus drafts while `previewDrafts` is on); stops with a list of problems if `products.json` is malformed or an `active` product is not ready to be sold
 - `npm run validate` — table of every product and what it still needs before it can be `active`
 - `npx wrangler dev` — after `npm run build`: the built site with its server side, as on Cloudflare (secrets from `.dev.vars`, see `.dev.vars.example`)
 - `npm test` — unit tests
@@ -28,7 +28,7 @@ If a field is still blank, ask me before choosing. Prefer the simplest option th
 
 ## Where things live
 - `products.json` — the product catalogue, single source of truth (guide: `PRODUCTS.md`, field reference and checks: `lib/product-schema.ts`). `supplier.*` is internal and never rendered.
-- `config/shop.ts` — shipping methods, countries, VAT status, fallback delivery estimate
+- `config/shop.ts` — shop name, shipping methods, countries, VAT status, fallback delivery estimate, and `previewDrafts` (pre-launch switch: shows drafts on the built site with a preview notice and hides the site from search engines; **must be `false` at launch**)
 - `messages/et.json`, `messages/en.json` — all UI text, including category names (a new category needs a name in both)
 - `app/[locale]/[[...path]]/page.tsx` — one route for home, products and categories (a static export cannot build a dynamic route with nothing to generate, e.g. no products on sale)
 - `lib/routes.ts` — all URLs: `/et/tooted/<slug>/`, `/en/products/<slug>/`, `/et/kategooria/<slug>/`, `/en/category/<slug>/`
@@ -61,16 +61,24 @@ Not in MVP: user accounts, wishlists, blog, reviews system, live chat, multi-cur
 - I will write/approve the Estonian copy. Mark any Estonian you generate with `TODO: check ET` so I review it.
 
 ## Design direction
-**A) Traditional Christmas shop** (chosen) — like an old German Christmas-market store: deep red, dark green, cream, a little gold; serif headings; wood/paper textures used sparingly; products shown like a shop window; classic category menu. Usability and conversion come before decoration: compact product grids, clear prices, delivery estimates and purchase buttons.
+**"Noël" — a dark, candle-lit Christmas boutique** (owner's decision, 11 Nov 2026; replaces the earlier cream/red/green market-stall direction). The look comes from the owner's Noël prototype and is defined in `app/globals.css`:
 
-### Must NOT look "AI-generated / vibe-coded"
-Avoid all of these:
-- Purple/blue gradients, gradient blobs, glassmorphism, neon glows
-- Giant empty hero sections with vague slogans ("Elevate your holidays")
-- Emoji used as icons; generic 3-feature-cards row with icons
-- Everything in Inter/system font with identical rounded cards
-- Fake-looking stock photos, floating 3D shapes, excessive animations
-Instead: real product photos, clear prices, a dense but tidy layout, a distinct font pairing, and copy that says exactly what the product is and when it arrives.
+- Colours: background `#100b09`, panels `#1c100e`, burgundy `#651b26`, champagne `#d9b995` (accent, buttons), cream `#f1e5d5` (text), muted `#b8a99b`.
+- Type: Cormorant Garamond headings, with the accent word of a heading in champagne italic; Inter for everything else. Small uppercase, widely spaced "eyebrow" labels with a hairline rule.
+- Shapes: pill buttons, rounded bordered cards with a soft lift on hover.
+- Pictures: real product photos when the owner provides them. Until then the SVG illustrations in `components/art/` stand in (`lib/art.ts` picks one per category/product); they are placeholders, never presented as the product itself.
+- Motion: light snowfall, hover lifts. Everything is off under `prefers-reduced-motion`.
+
+Usability and conversion still come before decoration: clear prices, delivery estimate under every price, obvious purchase buttons, and it must work at 375px.
+
+### From the prototype, deliberately NOT carried over
+These would be invented claims or needless data collection in a real shop, so do not add them back without real data behind them:
+- "Bestseller"/"Sale" badges and struck-through prices (no 30-day price history exists)
+- discount codes and "limited time" promotions, free-delivery meters, countdowns, "online now"
+- the demo product catalogue, reviews, newsletter sign-up and account page
+
+### Still avoid
+Purple/blue gradients, glassmorphism, neon glows, emoji as icons, fake-looking stock photos, floating 3D shapes, slogans that say nothing about the product.
 
 ## Required site elements
 - **Christmas delivery banner** sitewide, driven by config (e.g. "Telli enne 10. detsembrit — jõuab jõuludeks"). Dates come from config, never hard-coded. After the cutoff it switches to a different message automatically.
