@@ -54,6 +54,13 @@ export const imagery: { hero: Photo | null; categories: Record<string, Photo> } 
       alt: { et: "Jõupaberisse ja veinipunasesse paberisse pakitud kingid sametpaeltega.", en: "Presents wrapped in kraft and wine-red paper with velvet ribbons." },
       source: CANVA,
     },
-    // home: no photograph yet.
+    home: {
+      src: "/images/categories/home.webp",
+      alt: {
+        et: "Kolm põlevat küünalt laual tugitooli ja pleedi kõrval, akna taga sajab lund.",
+        en: "Three lit candles on a table beside an armchair and a throw, snow falling outside the window.",
+      },
+      source: CANVA,
+    },
   },
 };
