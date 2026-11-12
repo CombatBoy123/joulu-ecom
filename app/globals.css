@@ -544,6 +544,8 @@ button:hover > .arrow {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* On narrow screens keep the lit part of the picture in view. */
+  object-position: 74% center;
 }
 
 .hero__scrim {
