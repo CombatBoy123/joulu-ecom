@@ -67,7 +67,7 @@ Not in MVP: user accounts, wishlists, blog, reviews system, live chat, multi-cur
 
 - Colours: background `#100b09`, panels `#1c100e`, burgundy `#651b26`, champagne `#d9b995` (accent, buttons), cream `#f1e5d5` (text), muted `#b8a99b`.
 - Type: Cormorant Garamond headings, with the accent word of a heading in champagne italic; Inter for everything else. Small uppercase, widely spaced "eyebrow" labels with a hairline rule.
-- Shapes: pill buttons, rounded bordered cards with a soft lift on hover.
+- Shapes: pill buttons; bordered cards with small corner radii and only a slight lift on hover. No heavy shadows or oversized rounding.
 - Pictures: photography, not illustration. Product photos belong to each product (`products.json` → `images`); the home-page hero and category tiles take photos listed in `config/imagery.ts`. Where a photo is missing the site shows a plain candle-lit panel (products: "photo pending") — never a drawing or a picture of something else. No cartoon or geometric SVG art.
 - Layout: less decoration, more art direction — generous spacing and a restrained editorial rhythm.
 - Motion: light snowfall, hover lifts. Everything is off under `prefers-reduced-motion`.
