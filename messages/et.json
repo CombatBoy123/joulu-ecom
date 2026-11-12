@@ -76,7 +76,10 @@
     "packContents": "Komplektis",
     "care": "Hooldus",
     "soldOut": "Läbi müüdud",
-    "soldOutNote": "See toode on hetkel läbi müüdud."
+    "soldOutNote": "See toode on hetkel läbi müüdud.",
+    "illustrative": "Illustratiivne pilt",
+    "illustrativeAlt": "Illustratiivne pilt, mitte toote foto",
+    "illustrativeNote": "Pilt on illustratiivne ega kujuta täpselt müüdavat toodet. Toote foto lisatakse enne müügi algust."
   },
   "footer": {
     "deliveryHeading": "Tarne",

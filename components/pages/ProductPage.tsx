@@ -89,6 +89,7 @@ export function ProductPage({ locale, slug }: { locale: Locale; slug: string }) 
           <div className="product__image">
             <ProductMedia product={product} name={name} m={m} eager size={800} />
           </div>
+          {!images && product.illustration && <p className="product__illustrative-note">{m.product.illustrativeNote}</p>}
           {images && images.length > 1 && (
             <ul className="product__thumbs">
               {images.slice(1).map((src, i) => (

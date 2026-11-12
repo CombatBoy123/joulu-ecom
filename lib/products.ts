@@ -1,3 +1,5 @@
+import { existsSync } from "node:fs";
+import { join } from "node:path";
 import raw from "@/products.json";
 import et from "@/messages/et.json";
 import { shop } from "@/config/shop";
@@ -15,6 +17,14 @@ if (report.errors.length > 0) {
 for (const warning of report.warnings) console.warn(`[products.json] ${warning}`);
 
 const catalog = raw as unknown as Catalog;
+
+// A picture that is listed but missing would show as a broken image.
+const missingPictures = catalog.products
+  .flatMap((p) => [...p.images, ...(p.illustration ? [p.illustration] : [])])
+  .filter((src) => !existsSync(join(process.cwd(), "public", src)));
+if (missingPictures.length > 0) {
+  throw new Error("products.json lists pictures that are not in public/:\n" + missingPictures.map((s) => `  - ${s}`).join("\n"));
+}
 
 export const meta: CatalogMeta = catalog._meta;
 

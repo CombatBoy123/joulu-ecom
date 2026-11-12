@@ -83,6 +83,7 @@ const malformed: [string, (p: any) => void, RegExp][] = [
   ["duplicate slug", (p) => (p.slug = "jouluhelkur"), /more than once/],
   ["duplicate variant id", (p) => (p.variants[1].id = p.variants[0].id), /more than once/],
   ["warehouse as free text", (p) => (p.supplier.warehouse = "Germany"), /warehouse/],
+  ["an illustration linked from another site", (p) => (p.illustration = "https://example.com/a.png"), /illustration/],
   ["an unknown availability", (p) => (p.availability = "soon"), /availability/],
   ["a material that is a number", (p) => (p.specs.material = 5), /specs\.material/],
   ["missing safety block", (p) => delete p.safety, /safety/],
@@ -154,4 +155,11 @@ test("a spec is shown in the visitor's language, and not at all when unknown", (
   assert.equal(specText({ et: "Puuvill", en: "Cotton" }, "et"), "Puuvill");
   assert.equal(specText({ et: null, en: "Cotton" }, "et"), "Cotton");
   assert.equal(specText(null, "et"), null);
+});
+
+test("an illustration is not a product photo: an active product still needs a real one", () => {
+  const { catalog, p } = ready();
+  p.images = [];
+  p.illustration = "/images/illustrations/christmas-stocking-decoration.webp";
+  assert.match(validateCatalog(catalog, CATEGORIES).errors.join("\n"), /cannot be active.*images: no product photo/);
 });
