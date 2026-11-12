@@ -1,0 +1,678 @@
+{
+  "_note": "Candidates read from the suppliers' own product pages on 12 Nov 2026. Every value is what the page listed on that day; nothing is confirmed by a quote, a sample or a compliance document. Prices are the suppliers' business prices without VAT, not retail prices. Not part of the shop catalogue: products.json is.",
+  "candidates": [
+    {
+      "collection": "felt",
+      "supplier": "Logotrade OÜ (logo.ee)",
+      "name_en": "6-piece Christmas tree decorations FERGUS",
+      "supplier_code": "EG-0331",
+      "brand_listed": "Basic",
+      "url": "https://www.logo.ee/en/p/6piece-christmas-tree-decorations-fergus",
+      "description_supplier": "6-piece hanging tree decorations made of felt. The 6 different motifs embellish every Christmas tree.",
+      "colours_listed": [
+        "red"
+      ],
+      "price_tiers": [
+        {
+          "from_qty": null,
+          "unit_price_eur_ex_vat": 1.36
+        }
+      ],
+      "vat": "prices exclude VAT",
+      "minimum": "50 pcs",
+      "availability": "out of stock",
+      "image_url": "https://www.logo.ee/product/viewimage/18441652/6piece-christmas-tree-decorations-fergus.jpg",
+      "image_rights": "unverified – supplier image, permission not obtained",
+      "ships_to_estonia": "supplier is in Estonia; delivery terms unverified",
+      "checked": "2026-11-12"
+    },
+    {
+      "collection": "felt",
+      "supplier": "Logotrade OÜ (logo.ee)",
+      "name_en": "CreaFelt Tree – Christmas tree ornament, Christmas tree",
+      "supplier_code": "AP716791-GROUP",
+      "brand_listed": null,
+      "url": "https://www.logo.ee/en/p/creafelt-tree--christmas-tree-ornament-christmas-tree-2",
+      "description_supplier": "Custom made, dual-layer RPET felt and birch plywood Christmas tree ornament with full silver ribbon and die-cut Christmas design on the top layer. Price includes UV LED printing on the bottom layer. MOQ: 100 pcs.",
+      "colours_listed": [
+        "grey"
+      ],
+      "price_tiers": [
+        {
+          "from_qty": null,
+          "unit_price_eur_ex_vat": 1.74
+        }
+      ],
+      "vat": "prices exclude VAT",
+      "minimum": "100 pcs",
+      "availability": "out of stock",
+      "image_url": "https://www.logo.ee/product/viewimage/19663290/creafelt-tree--christmas-tree-ornament-christmas-tree.jpg",
+      "image_rights": "unverified – supplier image, permission not obtained",
+      "ships_to_estonia": "supplier is in Estonia; delivery terms unverified",
+      "checked": "2026-11-12"
+    },
+    {
+      "collection": "felt",
+      "supplier": "Logotrade OÜ (logo.ee)",
+      "name_en": "Felt Christmas dwarf",
+      "supplier_code": "MO-CX1482",
+      "brand_listed": "midocean",
+      "url": "https://www.logo.ee/en/p/felt-christmas-dwarf",
+      "description_supplier": "Felt Christmas decorative dwarf with cotton filling.",
+      "colours_listed": [
+        "Red"
+      ],
+      "price_tiers": [
+        {
+          "from_qty": null,
+          "unit_price_eur_ex_vat": 5.58
+        }
+      ],
+      "vat": "prices exclude VAT",
+      "minimum": "10 pcs",
+      "availability": "out of stock",
+      "image_url": "https://www.logo.ee/product/viewimage/17824601/felt-christmas-dwarf.jpg",
+      "image_rights": "unverified – supplier image, permission not obtained",
+      "ships_to_estonia": "supplier is in Estonia; delivery terms unverified",
+      "checked": "2026-11-12"
+    },
+    {
+      "collection": "felt",
+      "supplier": "Logotrade OÜ (logo.ee)",
+      "name_en": "Felt Christmas hat",
+      "supplier_code": "TP-LT90270",
+      "brand_listed": "Toppoint",
+      "url": "https://www.logo.ee/en/p/felt-christmas-hat",
+      "description_supplier": "Embrace the holiday spirit with this classic Christmas hat! Made from soft felt fabric and topped with a playful pom-pom. Whether you're celebrating at a holiday party, festive event, or just spreading cheer, this timeless accessory adds a joyful touch to any occasion.",
+      "colours_listed": [
+        "Red"
+      ],
+      "price_tiers": [
+        {
+          "from_qty": null,
+          "unit_price_eur_ex_vat": 0.78
+        }
+      ],
+      "vat": "prices exclude VAT",
+      "minimum": "50 pcs",
+      "availability": "in stock",
+      "image_url": "https://www.logo.ee/product/viewimage/19980149/felt-christmas-hat.jpg",
+      "image_rights": "unverified – supplier image, permission not obtained",
+      "ships_to_estonia": "supplier is in Estonia; delivery terms unverified",
+      "checked": "2026-11-12"
+    },
+    {
+      "collection": "felt",
+      "supplier": "Logotrade OÜ (logo.ee)",
+      "name_en": "Felt Christmas stocking 20 cm",
+      "supplier_code": "TP-LT90273",
+      "brand_listed": "Toppoint",
+      "url": "https://www.logo.ee/en/p/felt-christmas-stocking-20-cm",
+      "description_supplier": "A charming addition to any holiday décor, this small felt stocking is perfect for holding little surprises. Its soft material and classic design make it a timeless holiday keepsake.",
+      "colours_listed": [
+        "White / Green",
+        "White / Red"
+      ],
+      "price_tiers": [
+        {
+          "from_qty": null,
+          "unit_price_eur_ex_vat": 0.72
+        }
+      ],
+      "vat": "prices exclude VAT",
+      "minimum": "50 pcs",
+      "availability": "in stock",
+      "image_url": "https://www.logo.ee/product/viewimage/19980184/felt-christmas-stocking-20-cm.jpg",
+      "image_rights": "unverified – supplier image, permission not obtained",
+      "ships_to_estonia": "supplier is in Estonia; delivery terms unverified",
+      "checked": "2026-11-12"
+    },
+    {
+      "collection": "felt",
+      "supplier": "Logotrade OÜ (logo.ee)",
+      "name_en": "Felt gnome decoration",
+      "supplier_code": "MO-CX1589",
+      "brand_listed": "midocean",
+      "url": "https://www.logo.ee/en/p/felt-gnome-decoration",
+      "description_supplier": "Decorative felt gnome with polyester beard and cotton filling & quartz sand.",
+      "colours_listed": [
+        "Green",
+        "Grey",
+        "Red"
+      ],
+      "price_tiers": [
+        {
+          "from_qty": null,
+          "unit_price_eur_ex_vat": 3.28
+        }
+      ],
+      "vat": "prices exclude VAT",
+      "minimum": "20 pcs",
+      "availability": "in stock",
+      "image_url": "https://www.logo.ee/product/viewimage/19909672/felt-gnome-decoration.jpg",
+      "image_rights": "unverified – supplier image, permission not obtained",
+      "ships_to_estonia": "supplier is in Estonia; delivery terms unverified",
+      "checked": "2026-11-12"
+    },
+    {
+      "collection": "felt",
+      "supplier": "Logotrade OÜ (logo.ee)",
+      "name_en": "Felt gnome tree hanger",
+      "supplier_code": "MO-CX1600",
+      "brand_listed": "midocean",
+      "url": "https://www.logo.ee/en/p/felt-gnome-tree-hanger",
+      "description_supplier": "Felt gnome tree hanger with polyester beard and cotton filling. Ribbon hanger included.",
+      "colours_listed": [
+        "Grey",
+        "Red"
+      ],
+      "price_tiers": [
+        {
+          "from_qty": null,
+          "unit_price_eur_ex_vat": 1.9
+        }
+      ],
+      "vat": "prices exclude VAT",
+      "minimum": "50 pcs",
+      "availability": "in stock",
+      "image_url": "https://www.logo.ee/product/viewimage/19909840/felt-gnome-tree-hanger.jpg",
+      "image_rights": "unverified – supplier image, permission not obtained",
+      "ships_to_estonia": "supplier is in Estonia; delivery terms unverified",
+      "checked": "2026-11-12"
+    },
+    {
+      "collection": "felt",
+      "supplier": "Logotrade OÜ (logo.ee)",
+      "name_en": "Gnome on wooden sleigh",
+      "supplier_code": "MO-CX1588",
+      "brand_listed": "midocean",
+      "url": "https://www.logo.ee/en/p/gnome-on-wooden-sleigh",
+      "description_supplier": "Decorative gnome on wooden sleigh. Knit and felt gnome with cotton filling and quartz. Poplar wood sleigh.",
+      "colours_listed": [
+        "Grey",
+        "Red"
+      ],
+      "price_tiers": [
+        {
+          "from_qty": null,
+          "unit_price_eur_ex_vat": 4.98
+        }
+      ],
+      "vat": "prices exclude VAT",
+      "minimum": "20 pcs",
+      "availability": "in stock",
+      "image_url": "https://www.logo.ee/product/viewimage/19909805/gnome-on-wooden-sleigh.jpg",
+      "image_rights": "unverified – supplier image, permission not obtained",
+      "ships_to_estonia": "supplier is in Estonia; delivery terms unverified",
+      "checked": "2026-11-12"
+    },
+    {
+      "collection": "glass",
+      "supplier": "Logotrade OÜ (logo.ee)",
+      "name_en": "8 cm glass Christmas bauble with logo – BASIC PLUS, 2–3-colour pad printing",
+      "supplier_code": "XL-8-PLUS-PAD23",
+      "brand_listed": "Brauns-Heitmann",
+      "url": "https://www.logo.ee/en/p/8-cm-glass-christmas-bauble-with-logo--basic-plus-23colour-pad-printing",
+      "description_supplier": "An 8 cm glass Christmas bauble made in Germany. For indoor use only. Selected decoration: 2–3-colour pad printing. Minimum order: 500 baubles per bauble colour and design. Choose from approximately 120 BASIC PLUS colours. The €50 surcharge for one bauble colour is included in the quantity-tier price. The quantity-tier unit price includes the bauble, selected print, standard silver or gold cap, protective tray packaging, setup and estimated freight. Hanging ribbon, special caps and gift packaging are optional extras. Production takes about 5 weeks after artwork approval; allow additional time for delivery. Supply your logo as a vector EPS or PDF. A PDF proof is provided for approval before production. The 2026 price list is valid until 31 December 2026. Ask for a quote above 4,999 baubles or for special options. The logo in the photograph is an example, not part of your artwork. View the colour chart (PDF)",
+      "colours_listed": [],
+      "price_tiers": [
+        {
+          "from_qty": null,
+          "unit_price_eur_ex_vat": 6.96
+        }
+      ],
+      "vat": "prices exclude VAT",
+      "minimum": "500 pcs",
+      "availability": "out of stock",
+      "image_url": "https://www.logo.ee/product/viewimage/20737544/8-cm-glass-christmas-bauble-with-logo--basic-plus-23colour-pad-printing.jpg",
+      "image_rights": "unverified – supplier image, permission not obtained",
+      "ships_to_estonia": "supplier is in Estonia; delivery terms unverified",
+      "checked": "2026-11-12"
+    },
+    {
+      "collection": "glass",
+      "supplier": "Logotrade OÜ (logo.ee)",
+      "name_en": "8 cm glass Christmas bauble with logo – BASIC PLUS, 4–5-colour pad printing",
+      "supplier_code": "XL-8-PLUS-PAD45",
+      "brand_listed": "Brauns-Heitmann",
+      "url": "https://www.logo.ee/en/p/8-cm-glass-christmas-bauble-with-logo--basic-plus-45colour-pad-printing",
+      "description_supplier": "An 8 cm glass Christmas bauble made in Germany. For indoor use only. Selected decoration: 4–5-colour pad printing. Minimum order: 500 baubles per bauble colour and design. Choose from approximately 120 BASIC PLUS colours. The €50 surcharge for one bauble colour is included in the quantity-tier price. The quantity-tier unit price includes the bauble, selected print, standard silver or gold cap, protective tray packaging, setup and estimated freight. Hanging ribbon, special caps and gift packaging are optional extras. Production takes about 5 weeks after artwork approval; allow additional time for delivery. Supply your logo as a vector EPS or PDF. A PDF proof is provided for approval before production. The 2026 price list is valid until 31 December 2026. Ask for a quote above 4,999 baubles or for special options. The logo in the photograph is an example, not part of your artwork. View the colour chart (PDF)",
+      "colours_listed": [],
+      "price_tiers": [
+        {
+          "from_qty": null,
+          "unit_price_eur_ex_vat": 7.28
+        }
+      ],
+      "vat": "prices exclude VAT",
+      "minimum": "500 pcs",
+      "availability": "out of stock",
+      "image_url": "https://www.logo.ee/product/viewimage/20737560/8-cm-glass-christmas-bauble-with-logo--basic-plus-45colour-pad-printing.jpg",
+      "image_rights": "unverified – supplier image, permission not obtained",
+      "ships_to_estonia": "supplier is in Estonia; delivery terms unverified",
+      "checked": "2026-11-12"
+    },
+    {
+      "collection": "glass",
+      "supplier": "Logotrade OÜ (logo.ee)",
+      "name_en": "8 cm glass Christmas bauble with logo – BASIC PLUS, one-colour pad printing",
+      "supplier_code": "XL-8-PLUS-PAD1",
+      "brand_listed": "Brauns-Heitmann",
+      "url": "https://www.logo.ee/en/p/8-cm-glass-christmas-bauble-with-logo--basic-plus-onecolour-pad-printing",
+      "description_supplier": "An 8 cm glass Christmas bauble made in Germany. For indoor use only. Selected decoration: one-colour pad printing. Minimum order: 500 baubles per bauble colour and design. Choose from approximately 120 BASIC PLUS colours. The €50 surcharge for one bauble colour is included in the quantity-tier price. The quantity-tier unit price includes the bauble, selected print, standard silver or gold cap, protective tray packaging, setup and estimated freight. Hanging ribbon, special caps and gift packaging are optional extras. Production takes about 5 weeks after artwork approval; allow additional time for delivery. Supply your logo as a vector EPS or PDF. A PDF proof is provided for approval before production. The 2026 price list is valid until 31 December 2026. Ask for a quote above 4,999 baubles or for special options. The logo in the photograph is an example, not part of your artwork. View the colour chart (PDF)",
+      "colours_listed": [],
+      "price_tiers": [
+        {
+          "from_qty": null,
+          "unit_price_eur_ex_vat": 6.0
+        }
+      ],
+      "vat": "prices exclude VAT",
+      "minimum": "500 pcs",
+      "availability": "out of stock",
+      "image_url": "https://www.logo.ee/product/viewimage/20737528/8-cm-glass-christmas-bauble-with-logo--basic-plus-onecolour-pad-printing.jpg",
+      "image_rights": "unverified – supplier image, permission not obtained",
+      "ships_to_estonia": "supplier is in Estonia; delivery terms unverified",
+      "checked": "2026-11-12"
+    },
+    {
+      "collection": "glass",
+      "supplier": "Logotrade OÜ (logo.ee)",
+      "name_en": "8 cm glass Christmas bauble with logo – BASIC PLUS, one-colour screen printing",
+      "supplier_code": "XL-8-PLUS-SCREEN1",
+      "brand_listed": "Brauns-Heitmann",
+      "url": "https://www.logo.ee/en/p/8-cm-glass-christmas-bauble-with-logo--basic-plus-onecolour-screen-printing",
+      "description_supplier": "An 8 cm glass Christmas bauble made in Germany. For indoor use only. Selected decoration: one-colour screen printing. Minimum order: 500 baubles per bauble colour and design. Choose from approximately 120 BASIC PLUS colours. The €50 surcharge for one bauble colour is included in the quantity-tier price. The quantity-tier unit price includes the bauble, selected print, standard silver or gold cap, protective tray packaging, setup and estimated freight. Hanging ribbon, special caps and gift packaging are optional extras. Production takes about 5 weeks after artwork approval; allow additional time for delivery. Supply your logo as a vector EPS or PDF. A PDF proof is provided for approval before production. The 2026 price list is valid until 31 December 2026. Ask for a quote above 4,999 baubles or for special options. The logo in the photograph is an example, not part of your artwork. View the colour chart (PDF)",
+      "colours_listed": [],
+      "price_tiers": [
+        {
+          "from_qty": null,
+          "unit_price_eur_ex_vat": 5.04
+        }
+      ],
+      "vat": "prices exclude VAT",
+      "minimum": "500 pcs",
+      "availability": "out of stock",
+      "image_url": "https://www.logo.ee/product/viewimage/20737576/8-cm-glass-christmas-bauble-with-logo--basic-plus-onecolour-screen-printing.jpg",
+      "image_rights": "unverified – supplier image, permission not obtained",
+      "ships_to_estonia": "supplier is in Estonia; delivery terms unverified",
+      "checked": "2026-11-12"
+    },
+    {
+      "collection": "glass",
+      "supplier": "Logotrade OÜ (logo.ee)",
+      "name_en": "8 cm glass Christmas bauble with logo – BASIC/BIG11, 2–3-colour pad printing",
+      "supplier_code": "XL-8-B11-PAD23",
+      "brand_listed": "Brauns-Heitmann",
+      "url": "https://www.logo.ee/en/p/8-cm-glass-christmas-bauble-with-logo--basicbig11-23colour-pad-printing",
+      "description_supplier": "An 8 cm glass Christmas bauble made in Germany. For indoor use only. Selected decoration: 2–3-colour pad printing. Minimum order: 240 baubles per bauble colour and design. Choose from the BASIC/BIG11 standard colours; there is no bauble colour surcharge. The quantity-tier unit price includes the bauble, selected print, standard silver or gold cap, protective tray packaging, setup and estimated freight. Hanging ribbon, special caps and gift packaging are optional extras. Production takes about 5 weeks after artwork approval; allow additional time for delivery. Supply your logo as a vector EPS or PDF. A PDF proof is provided for approval before production. The 2026 price list is valid until 31 December 2026. Ask for a quote above 4,999 baubles or for special options. The logo in the photograph is an example, not part of your artwork. View the colour chart (PDF)",
+      "colours_listed": [],
+      "price_tiers": [
+        {
+          "from_qty": null,
+          "unit_price_eur_ex_vat": 8.12
+        }
+      ],
+      "vat": "prices exclude VAT",
+      "minimum": "240 pcs",
+      "availability": "out of stock",
+      "image_url": "https://www.logo.ee/product/viewimage/20737496/8-cm-glass-christmas-bauble-with-logo--basicbig11-23colour-pad-printing.jpg",
+      "image_rights": "unverified – supplier image, permission not obtained",
+      "ships_to_estonia": "supplier is in Estonia; delivery terms unverified",
+      "checked": "2026-11-12"
+    },
+    {
+      "collection": "glass",
+      "supplier": "Logotrade OÜ (logo.ee)",
+      "name_en": "8 cm glass Christmas bauble with logo – BASIC/BIG11, 4–5-colour pad printing",
+      "supplier_code": "XL-8-B11-PAD45",
+      "brand_listed": "Brauns-Heitmann",
+      "url": "https://www.logo.ee/en/p/8-cm-glass-christmas-bauble-with-logo--basicbig11-45colour-pad-printing",
+      "description_supplier": "An 8 cm glass Christmas bauble made in Germany. For indoor use only. Selected decoration: 4–5-colour pad printing. Minimum order: 240 baubles per bauble colour and design. Choose from the BASIC/BIG11 standard colours; there is no bauble colour surcharge. The quantity-tier unit price includes the bauble, selected print, standard silver or gold cap, protective tray packaging, setup and estimated freight. Hanging ribbon, special caps and gift packaging are optional extras. Production takes about 5 weeks after artwork approval; allow additional time for delivery. Supply your logo as a vector EPS or PDF. A PDF proof is provided for approval before production. The 2026 price list is valid until 31 December 2026. Ask for a quote above 4,999 baubles or for special options. The logo in the photograph is an example, not part of your artwork. View the colour chart (PDF)",
+      "colours_listed": [],
+      "price_tiers": [
+        {
+          "from_qty": null,
+          "unit_price_eur_ex_vat": 9.16
+        }
+      ],
+      "vat": "prices exclude VAT",
+      "minimum": "240 pcs",
+      "availability": "out of stock",
+      "image_url": "https://www.logo.ee/product/viewimage/20737512/8-cm-glass-christmas-bauble-with-logo--basicbig11-45colour-pad-printing.jpg",
+      "image_rights": "unverified – supplier image, permission not obtained",
+      "ships_to_estonia": "supplier is in Estonia; delivery terms unverified",
+      "checked": "2026-11-12"
+    },
+    {
+      "collection": "glass",
+      "supplier": "Logotrade OÜ (logo.ee)",
+      "name_en": "8 cm glass Christmas bauble with logo – BASIC/BIG11, one-colour pad printing",
+      "supplier_code": "XL-8-B11-PAD1",
+      "brand_listed": "Brauns-Heitmann",
+      "url": "https://www.logo.ee/en/p/8-cm-glass-christmas-bauble-with-logo--basicbig11-onecolour-pad-printing",
+      "description_supplier": "An 8 cm glass Christmas bauble made in Germany. For indoor use only. Selected decoration: one-colour pad printing. Minimum order: 240 baubles per bauble colour and design. Choose from the BASIC/BIG11 standard colours; there is no bauble colour surcharge. The quantity-tier unit price includes the bauble, selected print, standard silver or gold cap, protective tray packaging, setup and estimated freight. Hanging ribbon, special caps and gift packaging are optional extras. Production takes about 5 weeks after artwork approval; allow additional time for delivery. Supply your logo as a vector EPS or PDF. A PDF proof is provided for approval before production. The 2026 price list is valid until 31 December 2026. Ask for a quote above 4,999 baubles or for special options. The logo in the photograph is an example, not part of your artwork. View the colour chart (PDF)",
+      "colours_listed": [],
+      "price_tiers": [
+        {
+          "from_qty": null,
+          "unit_price_eur_ex_vat": 6.68
+        }
+      ],
+      "vat": "prices exclude VAT",
+      "minimum": "240 pcs",
+      "availability": "out of stock",
+      "image_url": "https://www.logo.ee/product/viewimage/20737480/8-cm-glass-christmas-bauble-with-logo--basicbig11-onecolour-pad-printing.jpg",
+      "image_rights": "unverified – supplier image, permission not obtained",
+      "ships_to_estonia": "supplier is in Estonia; delivery terms unverified",
+      "checked": "2026-11-12"
+    },
+    {
+      "collection": "glass",
+      "supplier": "Logotrade OÜ (logo.ee)",
+      "name_en": "8 cm glass Christmas bauble with logo – BASIC/BIG11, one-colour screen printing",
+      "supplier_code": "XL-8-B11-SCREEN1",
+      "brand_listed": "Brauns-Heitmann",
+      "url": "https://www.logo.ee/en/p/8-cm-glass-christmas-bauble-with-logo--basicbig11-onecolour-screen-printing",
+      "description_supplier": "An 8 cm glass Christmas bauble made in Germany. For indoor use only. Selected decoration: one-colour screen printing. Minimum order: 240 baubles per bauble colour and design. Choose from the BASIC/BIG11 standard colours; there is no bauble colour surcharge. The quantity-tier unit price includes the bauble, selected print, standard silver or gold cap, protective tray packaging, setup and estimated freight. Hanging ribbon, special caps and gift packaging are optional extras. Production takes about 5 weeks after artwork approval; allow additional time for delivery. Supply your logo as a vector EPS or PDF. A PDF proof is provided for approval before production. The 2026 price list is valid until 31 December 2026. Ask for a quote above 4,999 baubles or for special options. The logo in the photograph is an example, not part of your artwork. View the colour chart (PDF)",
+      "colours_listed": [],
+      "price_tiers": [
+        {
+          "from_qty": null,
+          "unit_price_eur_ex_vat": 5.16
+        }
+      ],
+      "vat": "prices exclude VAT",
+      "minimum": "240 pcs",
+      "availability": "out of stock",
+      "image_url": "https://www.logo.ee/product/viewimage/20737395/8-cm-glass-christmas-bauble-with-logo--basicbig11-onecolour-screen-printing.jpg",
+      "image_rights": "unverified – supplier image, permission not obtained",
+      "ships_to_estonia": "supplier is in Estonia; delivery terms unverified",
+      "checked": "2026-11-12"
+    },
+    {
+      "collection": "glass",
+      "supplier": "Logotrade OÜ (logo.ee)",
+      "name_en": "Christmas Bauble Ø 6 cm - Made in Europe",
+      "supplier_code": "CG-1211",
+      "brand_listed": null,
+      "url": "https://www.logo.ee/en/p/christmas-bauble-o-6-cm--made-in-europe",
+      "description_supplier": "Christmas bauble made from glass (not plastic) and produced in Europe. Glass is a natural product that consists of 70% sand. This glass Christmas bauble has a diameter of 60 mm. Made in Germany.",
+      "colours_listed": [
+        "black",
+        "blue",
+        "gold",
+        "green",
+        "red",
+        "silver",
+        "white"
+      ],
+      "price_tiers": [
+        {
+          "from_qty": null,
+          "unit_price_eur_ex_vat": 8.7
+        }
+      ],
+      "vat": "prices exclude VAT",
+      "minimum": "240 pcs",
+      "availability": "out of stock",
+      "image_url": "https://www.logo.ee/product/viewimage/18067889/christmas-bauble-o-6-cm--made-in-europe.jpg",
+      "image_rights": "unverified – supplier image, permission not obtained",
+      "ships_to_estonia": "supplier is in Estonia; delivery terms unverified",
+      "checked": "2026-11-12"
+    },
+    {
+      "collection": "glass",
+      "supplier": "Logotrade OÜ (logo.ee)",
+      "name_en": "Christmas Bauble Ø 6 cm - set of 4 - Made in Europe",
+      "supplier_code": "CG-1318",
+      "brand_listed": null,
+      "url": "https://www.logo.ee/en/p/christmas-bauble-o-6-cm--set-of-4--made-in-europe",
+      "description_supplier": "A set of 4 glass Christmas baubles. These Christmas baubles are made from glass (not plastic) and produced in Europe. Glass is a natural product that consists of 70% sand. These glass Christmas balls have a diameter of 60 mm. 4 pieces per pack. Made in Germany.",
+      "colours_listed": [
+        "black",
+        "blue",
+        "gold",
+        "green",
+        "red",
+        "silver",
+        "white"
+      ],
+      "price_tiers": [
+        {
+          "from_qty": null,
+          "unit_price_eur_ex_vat": 10.9
+        }
+      ],
+      "vat": "prices exclude VAT",
+      "minimum": "240 pcs",
+      "availability": "out of stock",
+      "image_url": "https://www.logo.ee/product/viewimage/18067978/christmas-bauble-o-6-cm--set-of-4--made-in-europe.jpg",
+      "image_rights": "unverified – supplier image, permission not obtained",
+      "ships_to_estonia": "supplier is in Estonia; delivery terms unverified",
+      "checked": "2026-11-12"
+    },
+    {
+      "collection": "glass",
+      "supplier": "Logotrade OÜ (logo.ee)",
+      "name_en": "Decoration \"bell\" - pack. 12 pcs",
+      "supplier_code": "EL-32052",
+      "brand_listed": "Eljte",
+      "url": "https://www.logo.ee/en/p/decoration-bell--pack-12-pcs",
+      "description_supplier": "Material: glass & crystal. Dimensions: 95 × 115 × 10 mm. Minimum order quantity: 12 pcs. The displayed price is for the product without printing, engraving or embroidery. Decoration costs are added according to the selected method.",
+      "colours_listed": [],
+      "price_tiers": [
+        {
+          "from_qty": null,
+          "unit_price_eur_ex_vat": 1.2
+        }
+      ],
+      "vat": "prices exclude VAT",
+      "minimum": "50 pcs",
+      "availability": "in stock",
+      "image_url": "https://www.logo.ee/product/viewimage/22799534/decoration-bell--pack-12-pcs.jpg",
+      "image_rights": "unverified – supplier image, permission not obtained",
+      "ships_to_estonia": "supplier is in Estonia; delivery terms unverified",
+      "checked": "2026-11-12"
+    },
+    {
+      "collection": "glass",
+      "supplier": "Logotrade OÜ (logo.ee)",
+      "name_en": "Decoration glass star - pack. 12 pcs",
+      "supplier_code": "EL-32051",
+      "brand_listed": "Eljte",
+      "url": "https://www.logo.ee/en/p/decoration-glass-star--pack-12-pcs",
+      "description_supplier": "Material: glass & crystal. Dimensions: 90 × 90 × 10 mm. Minimum order quantity: 12 pcs. The displayed price is for the product without printing, engraving or embroidery. Decoration costs are added according to the selected method.",
+      "colours_listed": [],
+      "price_tiers": [
+        {
+          "from_qty": null,
+          "unit_price_eur_ex_vat": 1.2
+        }
+      ],
+      "vat": "prices exclude VAT",
+      "minimum": "50 pcs",
+      "availability": "in stock",
+      "image_url": "https://www.logo.ee/product/viewimage/22799531/decoration-glass-star--pack-12-pcs.jpg",
+      "image_rights": "unverified – supplier image, permission not obtained",
+      "ships_to_estonia": "supplier is in Estonia; delivery terms unverified",
+      "checked": "2026-11-12"
+    },
+    {
+      "collection": "glass",
+      "supplier": "MP Reklaam (MP-Reklaamtrükk OÜ)",
+      "name_en": "Christmas LED glass ball Santa Light",
+      "supplier_code": "CX1541-40",
+      "supplier_sku": "PP90507",
+      "gtin": "8719941074101",
+      "url": "https://mpreklaam.ee/en/christmas-led-glass-ball-santa-light---PP90507",
+      "description_supplier": "Glass Christmas ball ornament with LED light (100 lumens) on a rubber wood base. Includes a USB charging cable (90 cm).",
+      "material_listed": "Glass",
+      "colours_listed": "Wood",
+      "dimensions_listed": {
+        "Width": "600.00 mm",
+        "Length": "610.00 mm",
+        "Height": "750.00 mm"
+      },
+      "weight_listed": "380.00 g",
+      "country_of_origin": "China",
+      "price_tiers": [
+        {
+          "from_qty": 1,
+          "unit_price_eur_ex_vat": 25.6
+        },
+        {
+          "from_qty": 5,
+          "unit_price_eur_ex_vat": 8.53
+        },
+        {
+          "from_qty": 10,
+          "unit_price_eur_ex_vat": 7.31
+        },
+        {
+          "from_qty": 25,
+          "unit_price_eur_ex_vat": 6.4
+        },
+        {
+          "from_qty": 50,
+          "unit_price_eur_ex_vat": 5.12
+        },
+        {
+          "from_qty": 100,
+          "unit_price_eur_ex_vat": 4.65
+        },
+        {
+          "from_qty": 150,
+          "unit_price_eur_ex_vat": 4.27
+        },
+        {
+          "from_qty": 2000,
+          "unit_price_eur_ex_vat": 4.13
+        },
+        {
+          "from_qty": 3500,
+          "unit_price_eur_ex_vat": 3.94
+        }
+      ],
+      "vat": "prices exclude VAT",
+      "minimum": "Minimal purchase limit is €100.00",
+      "availability": "out of stock",
+      "image_url": "https://cdn.tc.promotron.com/web-images/fa9949f9-53db-4ee5-aae2-89f9608ad68f",
+      "image_rights": "unverified – supplier image, permission not obtained",
+      "ships_to_estonia": "supplier is in Estonia; delivery terms unverified",
+      "checked": "2026-11-12"
+    },
+    {
+      "collection": "glass",
+      "supplier": "MP Reklaam (MP-Reklaamtrükk OÜ)",
+      "name_en": "Glass bauble LED light Baubli",
+      "supplier_code": "CX1514-22",
+      "supplier_sku": "PP43042",
+      "gtin": "8719941059757",
+      "url": "https://mpreklaam.ee/en/glass-bauble-led-light-baubli---PP43042",
+      "description_supplier": "Glass bauble (Ø 8 cm)  with string of 8 LED warm yellow lights and jute cord. 2 AA batteries excluded.",
+      "material_listed": "Jute",
+      "colours_listed": "Transparent",
+      "dimensions_listed": {
+        "Width": "80.00 mm",
+        "Length": "80.00 mm",
+        "Diameter": "80.00 mm"
+      },
+      "weight_listed": "80.00 g",
+      "country_of_origin": "China",
+      "price_tiers": [
+        {
+          "from_qty": 1,
+          "unit_price_eur_ex_vat": 18.1
+        },
+        {
+          "from_qty": 20,
+          "unit_price_eur_ex_vat": 3.62
+        },
+        {
+          "from_qty": 100,
+          "unit_price_eur_ex_vat": 3.02
+        },
+        {
+          "from_qty": 2000,
+          "unit_price_eur_ex_vat": 2.59
+        },
+        {
+          "from_qty": 3500,
+          "unit_price_eur_ex_vat": 2.41
+        }
+      ],
+      "vat": "prices exclude VAT",
+      "minimum": "Minimal purchase limit is €100.00",
+      "availability": "partly in stock",
+      "image_url": "https://cdn.tc.promotron.com/web-images/4f11492f-caa3-453e-b63b-ac38af447cf5",
+      "image_rights": "unverified – supplier image, permission not obtained",
+      "ships_to_estonia": "supplier is in Estonia; delivery terms unverified",
+      "checked": "2026-11-12"
+    },
+    {
+      "collection": "glass",
+      "supplier": "MP Reklaam (MP-Reklaamtrükk OÜ)",
+      "name_en": "Snow ball glass ornament Santisimo",
+      "supplier_code": "CX1545-05",
+      "supplier_sku": "PP90510",
+      "gtin": "8719941076099",
+      "url": "https://mpreklaam.ee/en/snow-ball-glass-ornament-santisimo---PP90510",
+      "description_supplier": "Christmas glass snow ball ornament with polyresin base.",
+      "material_listed": "Glass",
+      "colours_listed": "Red",
+      "dimensions_listed": {
+        "Width": "55.00 mm",
+        "Length": "55.00 mm",
+        "Height": "80.00 mm"
+      },
+      "weight_listed": "308.00 g",
+      "country_of_origin": "China",
+      "price_tiers": [
+        {
+          "from_qty": 1,
+          "unit_price_eur_ex_vat": 21.3
+        },
+        {
+          "from_qty": 5,
+          "unit_price_eur_ex_vat": 7.1
+        },
+        {
+          "from_qty": 10,
+          "unit_price_eur_ex_vat": 6.09
+        },
+        {
+          "from_qty": 25,
+          "unit_price_eur_ex_vat": 5.33
+        },
+        {
+          "from_qty": 50,
+          "unit_price_eur_ex_vat": 4.26
+        },
+        {
+          "from_qty": 100,
+          "unit_price_eur_ex_vat": 3.87
+        },
+        {
+          "from_qty": 150,
+          "unit_price_eur_ex_vat": 3.55
+        },
+        {
+          "from_qty": 2000,
+          "unit_price_eur_ex_vat": 3.44
+        },
+        {
+          "from_qty": 3500,
+          "unit_price_eur_ex_vat": 3.28
+        }
+      ],
+      "vat": "prices exclude VAT",
+      "minimum": "Minimal purchase limit is €100.00",
+      "availability": "in stock",
+      "image_url": "https://cdn.tc.promotron.com/web-images/f72d6d06-f5d2-4db8-bbdf-131c9038741f",
+      "image_rights": "unverified – supplier image, permission not obtained",
+      "ships_to_estonia": "supplier is in Estonia; delivery terms unverified",
+      "checked": "2026-11-12"
+    }
+  ]
+}

@@ -34,6 +34,7 @@ If a field is still blank, ask me before choosing. Prefer the simplest option th
 - `app/[locale]/[[...path]]/page.tsx` — one route for home, products and categories (a static export cannot build a dynamic route with nothing to generate, e.g. no products on sale)
 - `lib/routes.ts` — all URLs: `/et/tooted/<slug>/`, `/en/products/<slug>/`, `/et/kategooria/<slug>/`, `/en/category/<slug>/`
 - `components/pages/` — the pages themselves
+- `research/` — supplier research (candidates read from supplier pages, not verified products); nothing in it is part of the shop until it is added to `products.json`
 - `app/global-not-found.tsx`, `app/robots.ts`, `app/sitemap.ts` — the 404 page, and what search engines are told (everything is disallowed while `previewDrafts` is on)
 - `content/legal.et.json`, `content/legal.en.json` — legal pages; each shows a "draft" notice and is hidden from search engines until its `approved` is `true`
 - `lib/order.ts` — cart → priced order; the browser uses it for display, the server for what is charged
