@@ -1,6 +1,4 @@
-import ProductArt from "@/components/art/ProductArt";
 import { Arrow } from "@/components/Logo";
-import { placeholderArt } from "@/lib/art";
 import { categoryName, formatPrice, pick, type Locale, type Messages } from "@/lib/i18n";
 import { priceCents, type Product } from "@/lib/product-schema";
 import { deliveryText } from "@/lib/product-view";
@@ -14,13 +12,17 @@ interface Props {
   eager?: boolean;
 }
 
-/** The product's photo, or an illustration standing in until there is one. */
+/** The product's photo, or a quiet panel saying one is on its way. */
 export function ProductMedia({ product, name, m, eager, size }: { product: Product; name: string; m: Messages; eager?: boolean; size: number }) {
   const image = product.images[0];
   if (image) {
     return <img src={image} alt={name} width={size} height={size} loading={eager ? "eager" : "lazy"} decoding="async" />;
   }
-  return <ProductArt {...placeholderArt(product)} className="art" label={m.product.photoPending} />;
+  return (
+    <span className="no-photo">
+      <span>{m.product.photoPending}</span>
+    </span>
+  );
 }
 
 export function ProductCard({ product, locale, m, eager = false }: Props) {
