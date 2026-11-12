@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
-import { Cormorant_Garamond, Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 import { CartLink } from "@/components/CartLink";
 import { ChristmasBanner } from "@/components/ChristmasBanner";
@@ -14,18 +13,8 @@ import { getLegalPage } from "@/lib/legal";
 import { shopCutoff } from "@/lib/product-view";
 import { categories } from "@/lib/products";
 import { LEGAL_PAGE_IDS, routes } from "@/lib/routes";
+import { fontClasses } from "../fonts";
 import "../globals.css";
-
-// Downloaded when the site is built and served from our own domain: the
-// visitor's browser never contacts Google.
-const heading = Cormorant_Garamond({
-  subsets: ["latin", "latin-ext"],
-  weight: ["500", "600"],
-  style: ["normal", "italic"],
-  variable: "--font-heading",
-  display: "swap",
-});
-const body = Inter({ subsets: ["latin", "latin-ext"], variable: "--font-body", display: "swap" });
 
 type Props = { children: ReactNode; params: Promise<{ locale: string }> };
 
@@ -43,7 +32,9 @@ export async function generateMetadata({ params }: Pick<Props, "params">): Promi
   if (!isLocale(locale)) return {};
   const m = getMessages(locale);
   return {
+    metadataBase: new URL(shop.siteUrl),
     title: { default: shop.name, template: `%s · ${shop.name}` },
+    openGraph: { siteName: shop.name, type: "website", locale: locale === "et" ? "et_EE" : "en_GB" },
     description: m.meta.description,
     alternates: {
       languages: Object.fromEntries(LOCALES.map((l) => [l, routes.home(l)])),
@@ -61,7 +52,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   const carriers = [...new Set(shop.shipping.map((s) => s.carrier))].join(", ");
 
   return (
-    <html lang={locale} className={`${heading.variable} ${body.variable}`}>
+    <html lang={locale} className={fontClasses}>
       <body>
         <Snowfall />
         <a className="skip-link" href="#content">

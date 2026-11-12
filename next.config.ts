@@ -9,6 +9,9 @@ const config: NextConfig = {
   // next/image's on-demand optimiser needs a server; images are optimised
   // ahead of time instead.
   images: { unoptimized: true },
+  // One 404 page for the whole site; needed because each language has its
+  // own root layout (see app/global-not-found.tsx).
+  experimental: { globalNotFound: true },
 };
 
 export default config;

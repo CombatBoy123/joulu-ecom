@@ -21,6 +21,7 @@ export interface Sellable {
   status: string;
   price: number;
   variants: { id: string }[];
+  availability?: string;
 }
 
 export interface Shipping {
@@ -69,7 +70,7 @@ export function priceOrder<P extends Sellable, S extends Shipping>(
   products: readonly P[],
   shippingMethods: readonly S[],
   /** Which products may be bought. The server only ever allows "active". */
-  canBuy: (product: P) => boolean = (p) => p.status === "active",
+  canBuy: (product: P) => boolean = (p) => p.status === "active" && p.availability !== "sold-out",
 ): Order<P, S> {
   if (cart.length === 0) return { ok: false, error: "empty" };
   if (cart.length > MAX_LINES) return { ok: false, error: "too-many-lines" };

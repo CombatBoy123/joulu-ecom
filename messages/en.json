@@ -72,7 +72,11 @@
     "added": "Added to cart.",
     "viewCart": "View cart",
     "pickOptionFirst": "Please choose an option first.",
-    "view": "View"
+    "view": "View",
+    "packContents": "In the box",
+    "care": "Care",
+    "soldOut": "Sold out",
+    "soldOutNote": "This product is sold out at the moment."
   },
   "footer": {
     "deliveryHeading": "Delivery",
@@ -150,5 +154,10 @@
   },
   "preview": {
     "notice": "Preview: the shop is not open yet. Products marked as drafts cannot be bought, and their prices and texts may change."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The address may be wrong or the page has been removed.",
+    "home": "To the home page"
   }
 }

@@ -104,6 +104,16 @@ for (const [name, body, status, error] of rejected) {
   });
 }
 
+test("checkout refuses a product that has sold out since it was put in the cart", async () => {
+  const stripe = fakeFetch(() => ({ body: {} }));
+  const list = products();
+  list.find((p: any) => p.id === "christmas-stocking-decoration").availability = "sold-out";
+  const response = await createCheckout(checkoutRequest(validBody), checkoutDeps(stripe.impl, { products: list }));
+  assert.equal(response.status, 400);
+  assert.equal((await response.json()).error, "unavailable");
+  assert.equal(stripe.calls.length, 0);
+});
+
 test("without a Stripe key the shop says payment is not open", async () => {
   const stripe = fakeFetch(() => ({ body: {} }));
   const response = await createCheckout(checkoutRequest(validBody), checkoutDeps(stripe.impl, { stripeSecretKey: undefined }));

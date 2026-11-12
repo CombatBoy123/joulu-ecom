@@ -6,7 +6,7 @@ import { ChristmasBanner } from "@/components/ChristmasBanner";
 import { shop } from "@/config/shop";
 import { christmasBannerState } from "@/lib/christmas";
 import { categoryName, fill, formatDayMonth, formatPrice, getMessages, pick, type Locale } from "@/lib/i18n";
-import { priceCents } from "@/lib/product-schema";
+import { isSoldOut, priceCents, specText } from "@/lib/product-schema";
 import { deliveryText, productCutoff } from "@/lib/product-view";
 import { getProduct } from "@/lib/products";
 import { routes } from "@/lib/routes";
@@ -15,8 +15,9 @@ export function productMetadata(locale: Locale, slug: string): Metadata {
   const product = getProduct(slug);
   if (!product) return {};
   return {
-    title: pick(product.name, locale),
-    description: pick(product.shortDescription, locale),
+    title: pick(product.seo?.title ?? product.name, locale),
+    description: pick(product.seo?.description ?? product.shortDescription, locale),
+    openGraph: product.images[0] ? { images: [product.images[0]] } : undefined,
     alternates: {
       languages: { et: routes.product("et", product.slug), en: routes.product("en", product.slug) },
     },
@@ -37,17 +38,46 @@ export function ProductPage({ locale, slug }: { locale: Locale; slug: string }) 
 
   // Rows without a value are left out; "null" is never printed.
   const specRows = [
-    [m.product.material, specs.material],
-    [m.product.dimensions, specs.dimensions],
+    [m.product.packContents, product.packContents ? pick(product.packContents, locale) : null],
+    [m.product.material, specText(specs.material, locale)],
+    [m.product.dimensions, specText(specs.dimensions, locale)],
     [m.product.weight, specs.weightG === null ? null : fill(m.product.weightValue, { g: specs.weightG })],
+    [m.product.care, product.care ? pick(product.care, locale) : null],
   ].filter((row): row is [string, string] => Boolean(row[1]));
 
   const operator = (operatorName: string | null, address: string | null) =>
     operatorName || address ? [operatorName, address].filter(Boolean).join(", ") : m.product.notProvided;
   const warnings = pick(safety.warnings, locale, `${product.id} warnings`);
 
+  // Search engines are told about a product only once it is really on sale.
+  const structuredData =
+    product.status === "active"
+      ? {
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name,
+          description: pick(product.shortDescription, locale),
+          sku: product.id,
+          image: product.images.map((src) => shop.siteUrl + src),
+          offers: {
+            "@type": "Offer",
+            url: shop.siteUrl + routes.product(locale, product.slug),
+            price: product.price.toFixed(2),
+            priceCurrency: "EUR",
+            availability: isSoldOut(product) ? "https://schema.org/OutOfStock" : "https://schema.org/InStock",
+          },
+        }
+      : null;
+
   return (
     <article className="product container page">
+      {structuredData && (
+        <script
+          type="application/ld+json"
+          // "<" is escaped so that product text can never close the script tag.
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
+        />
+      )}
       <nav className="breadcrumb" aria-label={m.nav.breadcrumb}>
         <a href={routes.home(locale)}>{m.nav.home}</a>
         <span aria-hidden="true"> / </span>
@@ -88,20 +118,26 @@ export function ProductPage({ locale, slug }: { locale: Locale; slug: string }) 
             beforeText={fill(m.product.christmas, { date: formatDayMonth(christmas.orderBy, locale) })}
           />
 
-          {/* Only ids and names go to the browser; supplier data stays here. */}
-          <AddToCart
-            productId={product.id}
-            variants={product.variants.map((v) => ({ id: v.id, name: pick(v.name, locale) }))}
-            cartHref={routes.cart(locale)}
-            text={{
-              chooseOption: m.product.chooseOption,
-              quantity: m.product.quantity,
-              addToCart: m.product.addToCart,
-              added: m.product.added,
-              viewCart: m.product.viewCart,
-              pickOptionFirst: m.product.pickOptionFirst,
-            }}
-          />
+          {isSoldOut(product) ? (
+            <p className="notice product__sold-out">{m.product.soldOutNote}</p>
+          ) : (
+            <>
+              {/* Only ids and names go to the browser; supplier data stays here. */}
+              <AddToCart
+                productId={product.id}
+                variants={product.variants.map((v) => ({ id: v.id, name: pick(v.name, locale) }))}
+                cartHref={routes.cart(locale)}
+                text={{
+                  chooseOption: m.product.chooseOption,
+                  quantity: m.product.quantity,
+                  addToCart: m.product.addToCart,
+                  added: m.product.added,
+                  viewCart: m.product.viewCart,
+                  pickOptionFirst: m.product.pickOptionFirst,
+                }}
+              />
+            </>
+          )}
         </div>
       </div>
 

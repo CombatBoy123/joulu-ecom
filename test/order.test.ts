@@ -7,6 +7,7 @@ const products = [
   { id: "bag", status: "active", price: 6.9, variants: [] },
   { id: "draft", status: "draft", price: 1, variants: [] },
   { id: "reflector", status: "blocked", price: 4.9, variants: [] },
+  { id: "gone", status: "active", price: 5, variants: [], availability: "sold-out" },
 ];
 const shipping = [{ id: "omniva", country: "EE", priceCents: 399 }];
 const line = (productId: string, variantId: string | null = null, quantity = 1) => ({ productId, variantId, quantity });
@@ -23,6 +24,7 @@ const refused: [string, ReturnType<typeof line>[], string, string][] = [
   ["a product that does not exist", [line("ghost")], "omniva", "unknown-product"],
   ["a draft product", [line("draft")], "omniva", "unavailable"],
   ["a blocked product", [line("reflector")], "omniva", "unavailable"],
+  ["a sold-out product", [line("gone")], "omniva", "unavailable"],
   ["a product with options but none chosen", [line("stocking")], "omniva", "variant-required"],
   ["an option that does not exist", [line("stocking", "purple")], "omniva", "unknown-variant"],
   ["an option on a product without options", [line("bag", "red")], "omniva", "unknown-variant"],

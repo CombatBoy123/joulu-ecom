@@ -9,6 +9,7 @@ export interface PublicProduct {
   id: string;
   slug: string;
   status: string;
+  availability: "available" | "sold-out";
   price: number;
   name: Localized;
   image: string | null;
@@ -20,6 +21,7 @@ export function toPublicProduct(product: Product): PublicProduct {
     id: product.id,
     slug: product.slug,
     status: product.status,
+    availability: product.availability ?? "available",
     price: product.price,
     name: product.name,
     image: product.images[0] ?? null,

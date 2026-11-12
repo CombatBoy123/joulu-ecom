@@ -72,7 +72,11 @@
     "added": "Lisatud ostukorvi.",
     "viewCart": "Vaata ostukorvi",
     "pickOptionFirst": "Palun vali enne variant.",
-    "view": "Vaata"
+    "view": "Vaata",
+    "packContents": "Komplektis",
+    "care": "Hooldus",
+    "soldOut": "Läbi müüdud",
+    "soldOutNote": "See toode on hetkel läbi müüdud."
   },
   "footer": {
     "deliveryHeading": "Tarne",
@@ -150,5 +154,10 @@
   },
   "preview": {
     "notice": "Eelvaade: pood ei ole veel avatud. Mustandiks märgitud tooteid ei saa osta ning nende hinnad ja tekstid võivad muutuda."
+  },
+  "notFound": {
+    "title": "Seda lehte ei leitud",
+    "body": "Aadress võib olla vigane või leht on eemaldatud.",
+    "home": "Avalehele"
   }
 }

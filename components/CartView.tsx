@@ -35,7 +35,8 @@ export function CartView({ locale, m, products, shipping, allowDrafts, links, pl
 
   useEffect(() => setReady(true), []);
 
-  const canBuy = (p: PublicProduct) => p.status === "active" || (allowDrafts && p.status === "draft");
+  const canBuy = (p: PublicProduct) =>
+    p.availability !== "sold-out" && (p.status === "active" || (allowDrafts && p.status === "draft"));
   // Lines whose product has since been withdrawn are dropped, with a note.
   const lines = stored.filter((l) => {
     const p = products.find((x) => x.id === l.productId);

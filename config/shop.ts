@@ -7,6 +7,13 @@ export const shop = {
   name: "Noël",
 
   /**
+   * The address the shop is served from, without a trailing slash. Used for
+   * links that must be absolute: search engines, sharing previews, sitemap.
+   * TODO(owner): replace with the shop's own domain once it has one.
+   */
+  siteUrl: "https://joulu-ecom.kristen-plaado.workers.dev",
+
+  /**
    * Before launch: also show "draft" products on the built site, marked as
    * drafts, so the shop can be looked at with products in it. While this is
    * on, the whole site is hidden from search engines and carries a "preview"

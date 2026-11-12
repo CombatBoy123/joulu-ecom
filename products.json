@@ -63,8 +63,14 @@
         "https://shopifyfile.oss-us-west-1.aliyuncs.com/attached/pingtai/202508/F741340F556E4EFD4FDEE24EBB6FEC51.jpg"
       ],
       "specs": {
-        "material": "Nylon (per supplier listing)",
-        "dimensions": "43 × 43 × 65 cm",
+        "material": {
+          "et": "Nailon (tarnija andmetel). TODO: check ET",
+          "en": "Nylon (per supplier listing)"
+        },
+        "dimensions": {
+          "et": "43 × 43 × 65 cm",
+          "en": "43 × 43 × 65 cm"
+        },
         "weightG": null
       },
       "supplier": {
@@ -164,7 +170,10 @@
         "https://shopifyfile.oss-us-west-1.aliyuncs.com/attached/pingtai/202410/D7B252C0E56171C6CA865B54F8F7CA33.jpg"
       ],
       "specs": {
-        "material": "Cloth (per supplier listing – exact fibre unknown)",
+        "material": {
+          "et": "Riie (tarnija andmetel; täpne kiukoostis teadmata). TODO: check ET",
+          "en": "Cloth (per supplier listing – exact fibre unknown)"
+        },
         "dimensions": null,
         "weightG": null
       },

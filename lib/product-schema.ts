@@ -11,6 +11,10 @@ export type Localized = Record<Locale, string | null>;
 
 export type ProductStatus = "active" | "draft" | "blocked";
 
+/** A fact about the product: translated text, or null while unconfirmed.
+ *  A plain string is accepted in drafts but must be translated before sale. */
+export type SpecText = string | Localized | null;
+
 export interface Variant {
   id: string;
   name: Localized;
@@ -38,7 +42,15 @@ export interface Product {
   images: string[];
   /** Supplier listing photos, for reference only. Never shown or hot-linked. */
   supplierImages: string[];
-  specs: { material: string | null; dimensions: string | null; weightG: number | null };
+  specs: { material: SpecText; dimensions: SpecText; weightG: number | null };
+  /** What is in the box, e.g. "6 ornaments". Optional. */
+  packContents?: Localized;
+  /** Washing / care instructions. Optional. */
+  care?: Localized;
+  /** "sold-out" keeps the product visible but not buyable. Default: available. */
+  availability?: "available" | "sold-out";
+  /** Search-engine title and description. Default: name and short description. */
+  seo?: { title: Localized; description: Localized };
   /** Internal only: never rendered, never sent to the browser. */
   supplier: {
     name: string | null;
@@ -86,6 +98,17 @@ export interface Catalog {
 const EU_COUNTRIES = new Set(
   "AT BE BG HR CY CZ DK EE FI FR DE GR HU IE IT LV LT LU MT NL PL PT RO SK SI ES SE".split(" "),
 );
+
+/** A spec in the visitor's language; null when there is nothing to show. */
+export function specText(value: SpecText, locale: Locale): string | null {
+  if (value === null) return null;
+  if (typeof value === "string") return value;
+  return value[locale] ?? value.en ?? value.et;
+}
+
+export function isSoldOut(product: { availability?: string }): boolean {
+  return product.availability === "sold-out";
+}
 
 export function priceCents(product: Pick<Product, "price">): number {
   return Math.round(product.price * 100);
@@ -248,9 +271,38 @@ function checkProduct(p: Obj, knownCategories: readonly string[] | undefined): O
     structure.push("supplierImages: must be a list of links");
   }
 
+  const isLocalizedShape = (v: unknown): v is Obj => isObj(v) && LOCALES.every((l) => isTextOrNull(v[l]));
   const specs = p.specs;
-  if (!isObj(specs) || !isTextOrNull(specs.material) || !isTextOrNull(specs.dimensions) || !isNumberOrNull(specs.weightG)) {
-    structure.push("specs: needs material (text/null), dimensions (text/null), weightG (number/null)");
+  if (!isObj(specs) || !isNumberOrNull(specs.weightG)) {
+    structure.push("specs: needs material, dimensions and weightG (number/null)");
+  } else {
+    for (const f of ["material", "dimensions"] as const) {
+      const v = specs[f];
+      if (v === null) continue; // unknown facts are simply not shown
+      if (typeof v === "string") {
+        blocking.push(`specs.${f}: written in one language only; use { "et": "…", "en": "…" }`);
+        if (UNFINISHED.test(v)) blocking.push(`specs.${f}: still contains TODO/TBD`);
+      } else if (isLocalizedShape(v)) {
+        localized(`specs.${f}`, v);
+      } else {
+        structure.push(`specs.${f}: must be text, { et, en } or null`);
+      }
+    }
+  }
+
+  // Optional customer-facing fields: checked only when present.
+  for (const f of ["packContents", "care"] as const) {
+    if (p[f] !== undefined) localized(f, p[f]);
+  }
+  if (p.availability !== undefined && p.availability !== "available" && p.availability !== "sold-out") {
+    structure.push('availability: must be "available" or "sold-out"');
+  }
+  if (p.seo !== undefined) {
+    if (!isObj(p.seo)) structure.push("seo: must be { title, description }");
+    else {
+      localized("seo.title", p.seo.title);
+      localized("seo.description", p.seo.description);
+    }
   }
 
   const s = p.supplier;

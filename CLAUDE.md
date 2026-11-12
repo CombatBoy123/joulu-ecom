@@ -29,11 +29,12 @@ If a field is still blank, ask me before choosing. Prefer the simplest option th
 ## Where things live
 - `products.json` — the product catalogue, single source of truth (guide: `PRODUCTS.md`, field reference and checks: `lib/product-schema.ts`). `supplier.*` is internal and never rendered.
 - `config/imagery.ts` — hero and category photographs (file, alt text, where it came from); the build stops if a listed file is missing
-- `config/shop.ts` — shop name, shipping methods, countries, VAT status, fallback delivery estimate, and `previewDrafts` (pre-launch switch: shows drafts on the built site with a preview notice and hides the site from search engines; **must be `false` at launch**)
+- `config/shop.ts` — shop name, site address (`siteUrl`, used for sitemap, sharing previews and product data for search engines), shipping methods, countries, VAT status, fallback delivery estimate, and `previewDrafts` (pre-launch switch: shows drafts on the built site with a preview notice and hides the site from search engines; **must be `false` at launch**)
 - `messages/et.json`, `messages/en.json` — all UI text, including category names (a new category needs a name in both)
 - `app/[locale]/[[...path]]/page.tsx` — one route for home, products and categories (a static export cannot build a dynamic route with nothing to generate, e.g. no products on sale)
 - `lib/routes.ts` — all URLs: `/et/tooted/<slug>/`, `/en/products/<slug>/`, `/et/kategooria/<slug>/`, `/en/category/<slug>/`
 - `components/pages/` — the pages themselves
+- `app/global-not-found.tsx`, `app/robots.ts`, `app/sitemap.ts` — the 404 page, and what search engines are told (everything is disallowed while `previewDrafts` is on)
 - `content/legal.et.json`, `content/legal.en.json` — legal pages; each shows a "draft" notice and is hidden from search engines until its `approved` is `true`
 - `lib/order.ts` — cart → priced order; the browser uses it for display, the server for what is charged
 - `worker/` — server side: `POST /api/checkout` (creates the Stripe session from server-side prices), `GET /api/order` (is this session paid?), `POST /api/stripe-webhook` (signature-checked; sends the order e-mails)

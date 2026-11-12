@@ -37,21 +37,30 @@ This file explains the data, how to implement it, and what is still unverified.
 
 ---
 
-## 2. Product status (as of 11 Nov 2026)
+## 2. Product status and validation (as of 12 Nov 2026)
 
-| Product | Status | Supplier found | What's missing |
-|---|---|---|---|
-| Christmas pet bandana | draft | EPROLO listing | cost, warehouse, delivery time to EE, pick Christmas designs, GPSR info, own photos |
-| Embroidered Christmas stocking (hanging decoration) | draft | EPROLO listing | confirm it's a hanging decoration not wearable socks, size, cost, warehouse, GPSR info |
-| Felt ornament set | draft | none yet | everything — supplier still to find |
-| Christmas tree reflector | **blocked** | none valid | certified supplier (EN 17353/EN 13356 + CE) |
+Nothing below is verified against a supplier quote, a sample or a compliance document. "On site" means the value the preview site shows today; it is not a confirmed fact. Run `npm run validate` for the exact list of fields each product still lacks.
 
-### Things the owner must check personally (supplier accounts need a login)
-- **Unit cost, shipping cost and real warehouse** — supplier pages only show these after you sign up (free) and log in. EPROLO's pages also show inventory as being in **US warehouses**, which would be slow and taxed for Estonia — check if EU/CN stock exists.
-- **EU extra tax:** both EPROLO listings warn that each EU order gets an extra tax of **at least 6 USD**. On a €9.90 product that may wipe out the margin — verify with the shipping calculator for Estonia before activating.
-- **Order 1 sample of each** before going live.
+| Product | Price on site | Status | Verified | Unverified / missing | Owner decision needed |
+|---|---|---|---|---|---|
+| Christmas pet bandana | 9.90 € | draft | nothing | material ("nylon" is from the listing), dimensions, fit/closure, care, which designs, cost, warehouse, delivery time, manufacturer + EU responsible person, own photos | sizes or one size; keep or drop if the EU surcharge removes the margin |
+| Embroidered Christmas stocking | 8.90 € | draft | nothing | that it is a hanging decoration and not socks, size, fibre, hanging loop, care, cost, warehouse, safety data, photos of each colour | which of the four colours to carry |
+| Felt ornament set | 14.90 € | draft | nothing | supplier, piece count, sizes, material, small-parts/age suitability, everything else | whether to sell it at all before a supplier is found |
+| Christmas beanie & scarf | 14.90 € (placeholder) | draft | nothing | supplier, adult or child, size, fibre, care, colours | price |
+| Gift bag & tag set | 6.90 € (placeholder) | draft | nothing | supplier, quantity, bag sizes, paper, tag count | price |
+| Throw blanket | 29.90 € (placeholder) | draft | nothing | supplier, size, fibre, weight, care, colours | price |
+| Christmas tree reflector | 4.90 € | **blocked** | nothing | certified supplier (EN 17353 / EN 13356 + CE) | stays blocked until a certificate exists |
 
----
+Recommended launch assortment: start with the two products that have a supplier listing (bandana, stocking) once samples confirm them, rather than six thin listings. The other four stay drafts.
+
+### Optional product fields (all customer-facing)
+Add these to a product in `products.json` when the facts are confirmed; leave them out otherwise.
+
+- `specs.material`, `specs.dimensions` — `{ "et": "…", "en": "…" }`, or `null` while unknown (the row is then hidden)
+- `packContents` — what is in the box, `{ et, en }`
+- `care` — washing/care instructions, `{ et, en }`
+- `availability` — `"sold-out"` keeps the page visible but removes the buy button; the server refuses the order too
+- `seo` — `{ "title": { et, en }, "description": { et, en } }`; defaults to the name and short description
 
 ## 3. Supplier sources found
 
@@ -70,8 +79,18 @@ This file explains the data, how to implement it, and what is still unverified.
 ---
 
 ## 4. Next products to research (not in JSON yet)
-- Christmas beanie / scarf (light, sells into January)
-- Gift bag + gift tag sets (cart add-on)
-- Non-heated throw blanket (higher price, check shipping weight)
 
-Add each one to `products.json` with `status: "draft"` using the same structure.
+Ideas only — no supplier, price or availability is confirmed for any of them. Sources are the references the idea came from, not suppliers.
+
+| Idea | Category | Check before adding | Came from |
+|---|---|---|---|
+| LED window decoration / warm-white light chain | Winter home | EU-compliant supplier, power source, IP rating, batteries, CE declaration, instructions. Local shops sell battery lights from about 4.99 €, so price is hard to match (see section 3). | printandmerchandise.com Christmas theme |
+| Wooden Christmas ornament set | Decorations | finish safety, sizes, piece count; EU rules restrict some chemicals and wood preservatives in decorations | promoonline.eu Christmas theme |
+| Wrapping paper, ribbon and tag bundle | Gift wrapping | exact sheet count and lengths, materials | mpreklaam.ee Christmas products |
+| Pet Christmas toy | Pets | durability, no small parts, supervision note; never call it "indestructible" | new idea |
+
+Supplier search on 12 Nov 2026 found no supplier that verifiably stocks any of these in the EU and dropships to Estonia. Platforms worth checking by hand, none of them confirmed: Hertwill (says it ships from European warehouses), Syncee and Spocket (EU-warehouse filters).
+
+Unverified, but relevant to margin on anything shipped from outside the EU: one shipping guide says the EU's duty exemption for parcels under 150 € ended on 1 July 2026 and a flat customs duty per item now applies. Confirm with the Estonian Tax and Customs Board before relying on a non-EU supplier.
+
+Add each product to `products.json` with `status: "draft"` using the same structure once it has a real supplier.

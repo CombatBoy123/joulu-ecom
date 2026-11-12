@@ -1,6 +1,6 @@
 import { Arrow } from "@/components/Logo";
 import { categoryName, formatPrice, pick, type Locale, type Messages } from "@/lib/i18n";
-import { priceCents, type Product } from "@/lib/product-schema";
+import { isSoldOut, priceCents, type Product } from "@/lib/product-schema";
 import { deliveryText } from "@/lib/product-view";
 import { routes } from "@/lib/routes";
 
@@ -32,7 +32,11 @@ export function ProductCard({ product, locale, m, eager = false }: Props) {
     <li className="pcard">
       <a className="pcard__media" href={href} tabIndex={-1} aria-hidden="true">
         <ProductMedia product={product} name="" m={m} eager={eager} size={480} />
-        {product.status === "draft" && <span className="badge">{m.product.draftBadge}</span>}
+        {product.status === "draft" ? (
+          <span className="badge">{m.product.draftBadge}</span>
+        ) : (
+          isSoldOut(product) && <span className="badge badge--quiet">{m.product.soldOut}</span>
+        )}
       </a>
       <div className="pcard__body">
         <span className="pcard__cat">{categoryName(product.category, m)}</span>

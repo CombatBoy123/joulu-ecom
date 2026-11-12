@@ -1360,3 +1360,30 @@ button:hover > .arrow {
     transform: none;
   }
 }
+
+/* ---- Sold out, not found ---- */
+
+.badge--quiet {
+  background: var(--secondary);
+  border: 1px solid var(--border-strong);
+  color: var(--cream);
+}
+
+.product__sold-out {
+  margin-top: 24px;
+}
+
+.not-found {
+  display: grid;
+  gap: 48px;
+  padding-block: clamp(48px, 10vw, 120px);
+}
+
+.not-found h1 {
+  font-size: clamp(2rem, 4.6vw, 3.4rem);
+}
+
+.not-found p {
+  margin: 12px 0 24px;
+  color: var(--muted);
+}
