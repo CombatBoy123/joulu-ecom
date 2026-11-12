@@ -24,7 +24,7 @@ export function toPublicProduct(product: Product): PublicProduct {
     availability: product.availability ?? "available",
     price: product.price,
     name: product.name,
-    image: product.images[0] ?? null,
+    image: product.images[0] ?? product.illustration ?? null,
     variants: product.variants.map((v) => ({ id: v.id, name: v.name })),
   };
 }

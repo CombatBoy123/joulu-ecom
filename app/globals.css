@@ -1389,3 +1389,26 @@ button:hover > .arrow {
   margin: 12px 0 24px;
   color: var(--muted);
 }
+
+/* ---- Illustrative pictures (stand-ins until there is a product photo) ---- */
+
+.illustrative-label {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  z-index: 1;
+  padding: 3px 8px;
+  background: rgba(16, 11, 9, 0.78);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--cream);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.product__illustrative-note {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.875rem;
+}

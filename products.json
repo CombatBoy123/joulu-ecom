@@ -102,7 +102,8 @@
         "pets",
         "gift",
         "under-10"
-      ]
+      ],
+      "illustration": "/images/illustrations/pet-bandana-christmas.webp"
     },
     {
       "id": "christmas-stocking-decoration",
@@ -205,7 +206,8 @@
         "christmas",
         "decor",
         "gift-wrap"
-      ]
+      ],
+      "illustration": "/images/illustrations/christmas-stocking-decoration.webp"
     },
     {
       "id": "felt-ornament-set",
@@ -262,7 +264,8 @@
         "christmas",
         "decor",
         "ornaments"
-      ]
+      ],
+      "illustration": "/images/illustrations/felt-ornament-set.webp"
     },
     {
       "id": "christmas-reflector",
@@ -376,7 +379,8 @@
         "christmas",
         "accessories",
         "gift"
-      ]
+      ],
+      "illustration": "/images/illustrations/christmas-beanie-scarf.webp"
     },
     {
       "id": "gift-bag-tag-set",
@@ -433,7 +437,8 @@
         "christmas",
         "gift-wrap",
         "add-on"
-      ]
+      ],
+      "illustration": "/images/illustrations/gift-bag-tag-set.webp"
     },
     {
       "id": "throw-blanket",
@@ -490,7 +495,8 @@
         "winter",
         "home",
         "gift"
-      ]
+      ],
+      "illustration": "/images/illustrations/throw-blanket.webp"
     }
   ]
 }

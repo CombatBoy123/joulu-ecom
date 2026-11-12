@@ -76,7 +76,10 @@
     "packContents": "In the box",
     "care": "Care",
     "soldOut": "Sold out",
-    "soldOutNote": "This product is sold out at the moment."
+    "soldOutNote": "This product is sold out at the moment.",
+    "illustrative": "Illustrative image",
+    "illustrativeAlt": "Illustrative image, not a photo of the product",
+    "illustrativeNote": "The picture is illustrative and does not show the exact product on sale. A product photo will be added before sales begin."
   },
   "footer": {
     "deliveryHeading": "Delivery",

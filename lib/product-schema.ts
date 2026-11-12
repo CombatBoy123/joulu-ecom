@@ -40,6 +40,13 @@ export interface Product {
   variants: Variant[];
   /** The shop's own images, as paths under public/. */
   images: string[];
+  /**
+   * A stand-in picture for a product that has no photo yet, e.g. an
+   * AI-generated mood image. Always shown with an "illustrative image"
+   * label, never counts as a product photo, and is ignored once `images`
+   * has a real one. An active product still needs a real photo.
+   */
+  illustration?: string;
   /** Supplier listing photos, for reference only. Never shown or hot-linked. */
   supplierImages: string[];
   specs: { material: SpecText; dimensions: SpecText; weightG: number | null };
@@ -266,6 +273,9 @@ function checkProduct(p: Obj, knownCategories: readonly string[] | undefined): O
     structure.push('images: must be a list of paths under public/, each starting with "/" (no links to other sites)');
   } else if (p.images.length === 0) {
     blocking.push("images: no product photo");
+  }
+  if (p.illustration !== undefined && (typeof p.illustration !== "string" || !p.illustration.startsWith("/"))) {
+    structure.push('illustration: must be a path under public/, starting with "/"');
   }
   if (!Array.isArray(p.supplierImages) || !p.supplierImages.every((s) => typeof s === "string")) {
     structure.push("supplierImages: must be a list of links");

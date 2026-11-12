@@ -12,11 +12,23 @@ interface Props {
   eager?: boolean;
 }
 
-/** The product's photo, or a quiet panel saying one is on its way. */
+/**
+ * The product's photo. Without one: its stand-in picture, labelled as
+ * illustrative, or a quiet panel saying a photo is on its way.
+ */
 export function ProductMedia({ product, name, m, eager, size }: { product: Product; name: string; m: Messages; eager?: boolean; size: number }) {
   const image = product.images[0];
+  const loading = eager ? "eager" : "lazy";
   if (image) {
-    return <img src={image} alt={name} width={size} height={size} loading={eager ? "eager" : "lazy"} decoding="async" />;
+    return <img src={image} alt={name} width={size} height={size} loading={loading} decoding="async" />;
+  }
+  if (product.illustration) {
+    return (
+      <>
+        <img src={product.illustration} alt={m.product.illustrativeAlt} width={size} height={size} loading={loading} decoding="async" />
+        <span className="illustrative-label">{m.product.illustrative}</span>
+      </>
+    );
   }
   return (
     <span className="no-photo">
